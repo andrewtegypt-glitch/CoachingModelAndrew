@@ -18,67 +18,7 @@
         .nav{display:flex;gap:10px;flex-wrap:wrap;padding:14px 24px;background:#0d1730;border-bottom:1px solid #24314f;}
         .nav button{background:#18264a;color:#edf2ff;border:1px solid #2f4270;padding:10px 14px;border-radius:12px;cursor:pointer;}
         .nav button.active{background:#5b84ff;color:#fff;}
-        .section{displ<body>
-    <header>
-        <h1>Andrew Tadros Coaching</h1>
-        <p>Executive Excellence & Business Strategy</p>
-    </header>
-    <div class="main-tabs">
-        <button id="btn-deck" class="active" onclick="switchMain('deck')">Coaching Model Deck</button>
-        <button id="btn-calc" onclick="switchMain('calc')">Financial Calculator</button>
-    </div>
-    <div id="deck-section" class="content-section active">
-        <div class="nav">
-            <button class="active" onclick="showSection('overview', this)">Overview</button>
-            <button onclick="showSection('offer', this)">Offer Menu</button>
-            <button onclick="showSection('tiers', this)">Tiers</button>
-            <button onclick="showSection('financials', this)">Financial Summary</button>
-            <button onclick="showSection('charts', this)">Growth Charts</button>
-        </div>
-        <div id="overview" class="section active">
-            <div class="hero">
-                <div class="card">
-                    <div class="pill">Executive coaching</div>
-                    <div class="pill">ADHD support</div>
-                    <div class="pill">App access</div>
-                    <div class="pill">Free discovery for first 50</div>
-                    <h2>Andrew Tadros Coaching</h2>
-                    <p>Executive coaching for ambitious professionals, leaders, and high-potential clients who want clarity, structure, and measurable progress. Premium tiers include access to a proprietary coaching app for tracking goals, resources, and accountability.</p>
-                    <div>
-                        <a href="#financials" class="link" onclick="showSection('financials', document.querySelector('.nav button:nth-child(4)'))">View financials</a> · 
-                        <a href="#offer" class="link" onclick="showSection('offer', document.querySelector('.nav button:nth-child(2)'))">See packages</a>
-                    </div>
-                </div>
-                <div class="cta">
-                    <h2>Work with me</h2>
-                    <p>Ideal for leaders, founders, managers, and professionals who want practical coaching with a premium but grounded feel.</p>
-                    <a href="#" onclick="showSection('offer', document.querySelector('.nav button:nth-child(2)'))">Explore packages</a>
-                </div>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <div class="small">Year 1 Revenue</div>
-                    <div class="metric">83,795 USD</div>
-                    <div class="small">4,409,293 EGP</div>
-                </div>
-                <div class="card">
-                    <div class="small">Year 1 Net Profit</div>
-                    <div class="metric">68,691 USD</div>
-                    <div class="small">3,614,541 EGP</div>
-                </div>
-                <div class="card">
-                    <div class="small">Avg Monthly Revenue</div>
-                    <div class="metric">6,983 USD</div>
-                    <div class="small">367,441 EGP</div>
-                </div>
-                <div class="card">
-                    <div class="small">Avg Monthly Net</div>
-                    <div class="metric">5,724 USD</div>
-                    <div class="small">301,212 EGP</div>
-                </div>
-            </div>
-        </div>
-ay:none;padding:24px;max-width:1200px;margin:0 auto;}
+        .section{display:none;padding:24px;max-width:1200px;margin:0 auto;}
         .section.active{display:block;}
         .card{background:#101a33;border:1px solid #24314f;border-radius:18px;padding:20px;margin-bottom:18px;box-shadow:0 12px 30px rgba(0,0,0,.15);}
         .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
@@ -107,3 +47,182 @@ ay:none;padding:24px;max-width:1200px;margin:0 auto;}
         .total-revenue{font-size:24px;font-weight:bold;color:#c9a84c;text-align:center;padding:20px;border:2px dashed #c9a84c;border-radius:12px;}
     </style>
 </head>
+<body>
+    <header>
+        <h1>Andrew Tadros Coaching</h1>
+        <p>Executive Excellence & Business Strategy</p>
+    </header>
+    <div class="main-tabs">
+        <button id="btn-deck" class="active" onclick="switchMain('deck')">Coaching Model Deck</button>
+        <button id="btn-calc" onclick="switchMain('calc')">Financial Calculator</button>
+    </div>
+    <div id="deck-section" class="content-section active">
+        <div class="nav">
+            <button class="active" onclick="showSection('overview', this)">Overview</button>
+            <button onclick="showSection('offer', this)">Offer Menu</button>
+            <button onclick="showSection('tiers', this)">Tiers</button>
+            <button onclick="showSection('financials', this)">Financial Summary</button>
+            <button onclick="showSection('charts', this)">Growth Charts</button>
+        </div>
+        <div id="overview" class="section active">
+            <div class="hero">
+                <div class="card">
+                    <div class="pill">Executive coaching</div>
+                    <div class="pill">ADHD support</div>
+                    <div class="pill">App access</div>
+                    <div class="pill">Free discovery for first 50</div>
+                    <h2>Andrew Tadros Coaching</h2>
+                    <p>Executive coaching for ambitious professionals, leaders, and high-potential clients who want clarity, structure, and measurable progress.</p>
+                    <div>
+                        <a href="#financials" class="link" onclick="showSection('financials', document.querySelector('.nav button:nth-child(4)'))">View financials</a> · 
+                        <a href="#offer" class="link" onclick="showSection('offer', document.querySelector('.nav button:nth-child(2)'))">See packages</a>
+                    </div>
+                </div>
+                <div class="cta">
+                    <h2>Work with me</h2>
+                    <p>Ideal for leaders, founders, and professionals who want practical coaching with a premium feel.</p>
+                    <a href="#" onclick="showSection('offer', document.querySelector('.nav button:nth-child(2)'))">Explore packages</a>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="card"><div class="small">Year 1 Revenue</div><div class="metric">83,795 USD</div><div class="small">4,409,293 EGP</div></div>
+                <div class="card"><div class="small">Year 1 Net Profit</div><div class="metric">68,691 USD</div><div class="small">3,614,541 EGP</div></div>
+                <div class="card"><div class="small">Avg Monthly Revenue</div><div class="metric">6,983 USD</div><div class="small">367,441 EGP</div></div>
+                <div class="card"><div class="small">Avg Monthly Net</div><div class="metric">5,724 USD</div><div class="small">301,212 EGP</div></div>
+            </div>
+        </div>
+        <div id="offer" class="section">
+            <div class="card">
+                <h2>Offer menu</h2>
+                <table class="table">
+                    <thead><tr><th>Offer</th><th>Tier</th><th>USD</th><th>EGP</th><th>Per-session clarity</th><th>Includes</th></tr></thead>
+                    <tbody>
+                        <tr><td>Free Discovery</td><td>Launch</td><td>0</td><td>0</td><td>—</td><td>Free discovery session for first 50 clients</td></tr>
+                        <tr><td>Clarity Session</td><td>Entry</td><td>75</td><td>3,946</td><td>$75 / session</td><td>1 x 60-min session + action plan</td></tr>
+                        <tr><td>Momentum Program</td><td>Core</td><td>260</td><td>13,681</td><td>$65 / session</td><td>4 sessions + accountability habit building</td></tr>
+                        <tr><td>ADHD Focus Program</td><td>Core</td><td>475</td><td>24,994</td><td>$59.4 / session</td><td>8 sessions + app + tracking for neurodivergent leaders</td></tr>
+                        <tr><td>Executive Growth Program</td><td>Premium</td><td>625</td><td>32,888</td><td>$78.1 / session</td><td>8 sessions + app + deeper support</td></tr>
+                        <tr><td>Corporate Advisory</td><td>Premium</td><td>1,500</td><td>78,930</td><td>—</td><td>Monthly retainer for teams and leaders</td></tr>
+                    </tbody>
+                </table>
+                <p class="note">Per-session clarity shows the effective price per session where the package contains multiple sessions.</p>
+            </div>
+        </div>
+        <div id="tiers" class="section">
+            <div class="grid">
+                <div class="card"><h3>Free Discovery</h3><p>Free for the first 50 clients, then becomes a paid entry point.</p></div>
+                <div class="card"><h3>Clarity Session</h3><p>One focused session for a decision, obstacle, or reset.</p></div>
+                <div class="card"><h3>Momentum Program</h3><p>Four sessions, building sustainable leadership habits.</p></div>
+                <div class="card"><h3>ADHD Focus Program</h3><p>Eight sessions + app tracking for neurodivergent leaders.</p></div>
+                <div class="card"><h3>Executive Growth Program</h3><p>Eight sessions + app + deeper support for high-potential leaders.</p></div>
+                <div class="card"><h3>Corporate Advisory</h3><p>Retainer model for leaders, teams, and organizational support.</p></div>
+            </div>
+        </div>
+        <div id="financials" class="section">
+            <div class="card">
+                <h2>Financial Summary</h2>
+                <p class="note">All figures are shown in USD and EGP at 52.62 EGP per USD.</p>
+                <table class="table">
+                    <thead><tr><th>Metric</th><th>USD</th><th>EGP</th></tr></thead>
+                    <tbody>
+                        <tr><td>Year 1 Revenue</td><td>83,795</td><td>4,409,293</td></tr>
+                        <tr><td>Year 1 Net Profit</td><td>68,691</td><td>3,614,541</td></tr>
+                        <tr><td>Avg Monthly Revenue</td><td>6,983</td><td>367,441</td></tr>
+                        <tr><td>Avg Monthly Net</td><td>5,724</td><td>301,212</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="charts" class="section">
+            <div class="card"><h2>Revenue and Profit Growth</h2><div id="revenueChart" class="chart"></div></div>
+            <div class="card"><h2>Revenue Mix</h2><div id="mixChart" class="chart"></div></div>
+            <div class="card"><h2>Package Prices</h2><div id="packagesChart" class="chart"></div></div>
+        </div>
+    </div>
+    <div id="calc-section" class="content-section">
+        <div class="calc-grid">
+            <div class="card">
+                <h2>Adjust Monthly Client Volume</h2>
+                <div class="slider-group">
+                    <div class="slider-label"><span>Discovery (Free)</span><strong><span id="discovery-val">10</span> sessions</strong></div>
+                    <input type="range" id="discovery" min="0" max="50" value="10" oninput="calc()">
+                </div>
+                <div class="slider-group">
+                    <div class="slider-label"><span>Tier 1 (Individual)</span><strong><span id="tier1-val">5</span> clients</strong></div>
+                    <input type="range" id="tier1" min="0" max="20" value="5" oninput="calc()">
+                </div>
+                <div class="slider-group">
+                    <div class="slider-label"><span>Tier 2 (Premium)</span><strong><span id="tier2-val">2</span> clients</strong></div>
+                    <input type="range" id="tier2" min="0" max="10" value="2" oninput="calc()">
+                </div>
+                <div class="slider-group">
+                    <div class="slider-label"><span>Tier 3 (Corporate)</span><strong><span id="tier3-val">1</span> contract</strong></div>
+                    <input type="range" id="tier3" min="0" max="5" value="1" oninput="calc()">
+                </div>
+            </div>
+            <div class="card">
+                <h2>Projected Monthly Revenue & Sessions</h2>
+                <div class="result-box"><p>Tier 1 Income: <span id="t1-inc">$0</span> / <span id="t1-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t1-sess">0</span>/mo</div></div>
+                <div class="result-box"><p>Tier 2 Income: <span id="t2-inc">$0</span> / <span id="t2-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t2-sess">0</span>/mo</div></div>
+                <div class="result-box"><p>Tier 3 Income: <span id="t3-inc">$0</span> / <span id="t3-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t3-sess">0</span>/mo</div></div>
+                <div class="total-revenue" style="margin-top:20px">
+                    Monthly Total: <span id="total-usd">$0</span><br><span id="total-egp" style="font-size:16px;color:#8a9bc2">0 EGP</span>
+                    <div style="font-size:14px;margin-top:10px">Total Coaching Sessions: <span id="total-sess">0</span>/mo</div>
+                </div>
+                <div style="text-align:center;margin-top:15px;color:#8a9bc2">Yearly Goal: $100,000<br>Current Projection: <span id="yearly-pct">0%</span> of goal</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const rates = {t1: 500, t2: 1500, t3: 5000, fx: 48.5, s1: 4, s2: 4, s3: 8};
+        function switchMain(target){
+            document.querySelectorAll('.content-section').forEach(s=>s.classList.remove('active'));
+            document.querySelectorAll('.main-tabs button').forEach(b=>b.classList.remove('active'));
+            document.getElementById(target+'-section').classList.add('active');
+            document.getElementById('btn-'+target).classList.add('active');
+            if(target==='deck'){ setTimeout(()=>{ window.dispatchEvent(new Event('resize')); }, 10); }
+        }
+        function showSection(id,btn){
+            document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+            document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            if(btn)btn.classList.add('active');
+            if(id==='charts'){ renderCharts(); }
+        }
+        function calc(){
+            const d = parseInt(document.getElementById('discovery').value);
+            const t1 = parseInt(document.getElementById('tier1').value);
+            const t2 = parseInt(document.getElementById('tier2').value);
+            const t3 = parseInt(document.getElementById('tier3').value);
+            document.getElementById('discovery-val').innerText = d;
+            document.getElementById('tier1-val').innerText = t1;
+            document.getElementById('tier2-val').innerText = t2;
+            document.getElementById('tier3-val').innerText = t3;
+            const r1 = t1 * rates.t1; const r2 = t2 * rates.t2; const r3 = t3 * rates.t3;
+            const total = r1 + r2 + r3;
+            const sess1 = t1 * rates.s1; const sess2 = t2 * rates.s2; const sess3 = t3 * rates.s3;
+            const totalSess = sess1 + sess2 + sess3;
+            document.getElementById('t1-inc').innerText = '$' + r1.toLocaleString();
+            document.getElementById('t1-inc-egp').innerText = (r1 * rates.fx).toLocaleString() + ' EGP';
+            document.getElementById('t1-sess').innerText = sess1;
+            document.getElementById('t2-inc').innerText = '$' + r2.toLocaleString();
+            document.getElementById('t2-inc-egp').innerText = (r2 * rates.fx).toLocaleString() + ' EGP';
+            document.getElementById('t2-sess').innerText = sess2;
+            document.getElementById('t3-inc').innerText = '$' + r3.toLocaleString();
+            document.getElementById('t3-inc-egp').innerText = (r3 * rates.fx).toLocaleString() + ' EGP';
+            document.getElementById('t3-sess').innerText = sess3;
+            document.getElementById('total-usd').innerText = '$' + total.toLocaleString();
+            document.getElementById('total-egp').innerText = (total * rates.fx).toLocaleString() + ' EGP';
+            document.getElementById('total-sess').innerText = totalSess;
+            const yearly = total * 12; const pct = ((yearly / 100000) * 100).toFixed(1);
+            document.getElementById('yearly-pct').innerText = pct + '%';
+        }
+        function renderCharts(){
+            Plotly.newPlot('revenueChart', [{x:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], y:[2.78, 3.19, 3.34, 4.38, 6.5, 6.91, 7.06, 8.1, 8.72, 9.13, 11.4, 12.29], type:'scatter', mode:'lines+markers', name:'Revenue'}, {x:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], y:[1.86, 2.23, 2.37, 3.32, 5.28, 5.66, 5.8, 6.75, 7.32, 7.7, 9.79, 10.61], type:'scatter', mode:'lines+markers', name:'Net'}], {paper_bgcolor:'#101a33', plot_bgcolor:'#101a33', font:{color:'#edf2ff'}, margin:{t:40}});
+            Plotly.newPlot('mixChart', [{x:[20.7, 18.72, 11.88, 17.5, 15.0], y:['Clarity', 'Momentum', 'ADHD', 'Exec', 'Corp'], orientation:'h', type:'bar'}], {paper_bgcolor:'#101a33', plot_bgcolor:'#101a33', font:{color:'#edf2ff'}, margin:{l:100}});
+            Plotly.newPlot('packagesChart', [{x:['Free Disc.', 'Clarity', 'Momentum', 'ADHD', 'Exec', 'Corp'], y:[0, 75, 260, 475, 625, 1500], type:'bar', name:'USD'}, {x:['Free Disc.', 'Clarity', 'Momentum', 'ADHD', 'Exec', 'Corp'], y:[0, 3946, 13681, 24994, 32888, 78930], type:'bar', name:'EGP'}], {paper_bgcolor:'#101a33', plot_bgcolor:'#101a33', font:{color:'#edf2ff'}, barmode:'group'});
+        }
+        calc();
+    </script>
+</body>
+</html>
