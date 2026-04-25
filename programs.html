@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andrew Tadros | Program Structures</title>
-<script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 <style>
 body{margin:0;font-family:Inter,Arial,sans-serif;background:#08111f;color:#edf2ff;}
 header{padding:22px 26px;background:#101a33;text-align:center;border-bottom:2px solid #c9a84c;}
@@ -27,156 +26,203 @@ th{color:#9eb4ea;}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 @media(max-width:800px){.grid2{grid-template-columns:1fr;}}
 .muted{color:#b0bedd;font-size:13px;}
-#chart{height:480px;background:#0d1730;border-radius:14px;padding:10px;}
 ul{margin:6px 0 0 18px;padding:0;}
 li{margin:3px 0;font-size:14px;}
 .app-box{background:#16214a;border-left:4px solid #5b84ff;padding:12px 14px;border-radius:8px;margin-top:10px;}
 .app-box h4{margin:0 0 6px;color:#9fb6ff;}
+.blocks-wrap{background:#0d1730;border-radius:14px;padding:18px;overflow-x:auto;}
+.blocks-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;min-width:760px;}
+.blocks-col{display:flex;flex-direction:column-reverse;gap:6px;align-items:stretch;}
+.blocks-col .week{font-size:11px;color:#9eb4ea;text-align:center;margin-top:6px;font-weight:600;}
+.blk{padding:8px 6px;border-radius:6px;font-size:11px;color:#0a1628;font-weight:600;text-align:center;line-height:1.2;}
+.blk.foundation{background:#5b84ff;color:#fff;}
+.blk.skill{background:#9eb4ea;}
+.blk.advanced{background:#c9a84c;}
+.blk.mastery{background:#f0d27a;}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;font-size:12px;color:#b0bedd;}
+.legend span{display:inline-flex;align-items:center;gap:6px;}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;}
+.phone{display:flex;justify-content:center;margin-top:12px;}
+.phone svg{max-width:100%;height:auto;}
+.app-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px;}
+.app-feature{background:#0d1730;border:1px solid #24314f;border-radius:10px;padding:12px;}
+.app-feature h5{margin:0 0 4px;color:#9fb6ff;font-size:13px;}
+.app-feature p{margin:0;font-size:12px;color:#b0bedd;}
 </style>
 </head>
 <body>
 <header><h1>Program Structures &amp; Session Samples</h1><p>Tier-by-tier breakdown — week-by-week content, materials &amp; app touchpoints</p></header>
 <nav class="tabs">
-<button class="tb active" data-t="overview">Overview</button>
-<button class="tb" data-t="discovery">Free Discovery</button>
-<button class="tb" data-t="clarity">Clarity</button>
-<button class="tb" data-t="momentum">Momentum</button>
-<button class="tb" data-t="adhd">ADHD Focus</button>
-<button class="tb" data-t="executive">Executive Growth</button>
-<button class="tb" data-t="corporate">Corporate Advisory</button>
-<button class="tb" data-t="viz">Skill Build Visual</button>
+<button class="tab active" data-t="overview">Overview</button>
+<button class="tab" data-t="discovery">Free Discovery</button>
+<button class="tab" data-t="clarity">Clarity</button>
+<button class="tab" data-t="momentum">Momentum</button>
+<button class="tab" data-t="adhd">ADHD Focus</button>
+<button class="tab" data-t="executive">Executive Growth</button>
+<button class="tab" data-t="corporate">Corporate Advisory</button>
+<button class="tab" data-t="app">The App</button>
 </nav>
-<button class="tb" data-t="viz">Skill Build Visual</button>
-</nav>
+<section id="overview" class="section active">
+<div class="card">
+<h2>How the programs build skills over time</h2>
+<p class="muted">Each week adds a new block — a discrete skill, habit or capability — stacked on top of what came before. Foundations come first, then applied skills, then advanced and mastery layers. Coaching is cumulative: nothing is dropped, everything compounds.</p>
+<div class="blocks-wrap">
+<div class="blocks-grid">
+<div class="blocks-col"><div class="blk foundation">Self-awareness</div><div class="week">W1</div></div>
+<div class="blocks-col"><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W2</div></div>
+<div class="blocks-col"><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W3</div></div>
+<div class="blocks-col"><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W4</div></div>
+<div class="blocks-col"><div class="blk skill">Communication</div><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W5</div></div>
+<div class="blocks-col"><div class="blk skill">Boundaries</div><div class="blk skill">Communication</div><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W6</div></div>
+<div class="blocks-col"><div class="blk advanced">Decision frames</div><div class="blk skill">Boundaries</div><div class="blk skill">Communication</div><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W7</div></div>
+<div class="blocks-col"><div class="blk advanced">Influence</div><div class="blk advanced">Decision frames</div><div class="blk skill">Boundaries</div><div class="blk skill">Communication</div><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W8</div></div>
+<div class="blocks-col"><div class="blk advanced">Team leadership</div><div class="blk advanced">Influence</div><div class="blk advanced">Decision frames</div><div class="blk skill">Boundaries</div><div class="blk skill">Communication</div><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W9</div></div>
+<div class="blocks-col"><div class="blk advanced">Strategic thinking</div><div class="blk advanced">Team leadership</div><div class="blk advanced">Influence</div><div class="blk advanced">Decision frames</div><div class="blk skill">Boundaries</div><div class="blk skill">Communication</div><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W10</div></div>
+<div class="blocks-col"><div class="blk mastery">Executive presence</div><div class="blk advanced">Strategic thinking</div><div class="blk advanced">Team leadership</div><div class="blk advanced">Influence</div><div class="blk advanced">Decision frames</div><div class="blk skill">Boundaries</div><div class="blk skill">Communication</div><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W11</div></div>
+<div class="blocks-col"><div class="blk mastery">Self-coaching</div><div class="blk mastery">Executive presence</div><div class="blk advanced">Strategic thinking</div><div class="blk advanced">Team leadership</div><div class="blk advanced">Influence</div><div class="blk advanced">Decision frames</div><div class="blk skill">Boundaries</div><div class="blk skill">Communication</div><div class="blk skill">Focus systems</div><div class="blk skill">Energy mgmt</div><div class="blk foundation">Goal clarity</div><div class="blk foundation">Self-awareness</div><div class="week">W12</div></div>
+</div>
+<div class="legend"><span><i style="background:#5b84ff"></i>Foundations</span><span><i style="background:#9eb4ea"></i>Applied skills</span><span><i style="background:#c9a84c"></i>Advanced</span><span><i style="background:#f0d27a"></i>Mastery</span></div>
+</div>
+</div>
+</section>
+<section id="discovery" class="section">
+<div class="card"><h2>Free Discovery Call <span class="pill gold">Free • 45 min</span></h2>
+<p class="muted">A no-pressure conversation to understand where you are, where you want to go, and whether coaching is the right next step.</p>
+<h3>What we cover</h3>
+<ul><li>Current role context and key pressures</li><li>Top 1–2 goals or blockers you want to shift</li><li>Working style, values and non-negotiables</li><li>Fit-check: is coaching the right tool right now?</li><li>Recommended tier and next steps</li></ul>
+<h3>You walk away with</h3>
+<ul><li>A short written reflection on what I heard</li><li>One immediate experiment to try this week</li><li>A clear recommendation — even if it's not working with me</li></ul></div>
+</section>
 
-<section class="section active" id="overview">
-<div class="card"><h2>How to read this deck</h2>
-<p>Each program card includes: <span class="pill gold">Who it's for</span> <span class="pill">Week-by-week</span> <span class="pill">Content covered</span> <span class="pill">Supporting material</span> <span class="pill app">App touchpoints (mid/top tiers)</span></p>
-<table><thead><tr><th>Tier</th><th>Program</th><th>Duration</th><th>Price</th><th>App</th></tr></thead><tbody>
-<tr><td>Launch</td><td>Free Discovery</td><td>1 x 45 min</td><td>Free</td><td>—</td></tr>
-<tr><td>Entry</td><td>Clarity Session</td><td>1 x 60 min</td><td>$75</td><td>—</td></tr>
-<tr><td>Core</td><td>Momentum Program</td><td>4 weeks</td><td>$260</td><td>Light tracking</td></tr>
-<tr><td>Core</td><td>ADHD Focus Program</td><td>8 weeks</td><td>$475</td><td>Full app</td></tr>
-<tr><td>Premium</td><td>Executive Growth</td><td>8 weeks</td><td>$625</td><td>Full app + dashboard</td></tr>
-<tr><td>Premium</td><td>Corporate Advisory</td><td>Monthly retainer</td><td>$1,500/mo</td><td>Team dashboard</td></tr>
-</tbody></table></div></section>
-
-<section class="section" id="discovery">
-<div class="card"><h2>Free Discovery (Launch tier)</h2>
-<p class="muted"><span class="pill gold">Free — first 50 clients</span> 45 min • No obligation</p>
-<h3>Who it's for</h3><p>First-time coaching clients exploring fit. Used as a funnel into paid tiers.</p>
-<h3>Session structure</h3>
-<ul><li>0–10 min: Context — current role, pressures, 1 key challenge</li><li>10–30 min: Mini-coaching on the challenge (one actionable reframe)</li><li>30–40 min: Walk through program fit &amp; tier recommendation</li><li>40–45 min: Next step + calendar link</li></ul>
-<h3>Supporting material</h3><ul><li>Pre-call intake form (5 Qs)</li><li>Post-call summary PDF with 1 recommended action</li><li>Tier comparison one-pager</li></ul>
-</div></section>
-<section class="section" id="clarity">
-<div class="card"><h2>Clarity Session (Entry tier)</h2>
-<p class="muted"><span class="pill gold">$75</span> 1 x 60 min + action plan</p>
-<h3>Who it's for</h3><p>Mid-level professionals facing one specific challenge (promotion, team conflict, burnout). Quick unblock, no long commitment.</p>
-<h3>Session structure (60 min)</h3>
-<ul><li>0–10 min: Situational deep-dive &amp; framing</li><li>10–25 min: Root-cause exploration (5-whys or SCARF)</li><li>25–45 min: Solution design — 3 options, pick one</li><li>45–55 min: Implementation plan (who/what/when)</li><li>55–60 min: Commitment &amp; accountability hook</li></ul>
-<h3>Content covered</h3><ul><li>Single-challenge diagnostic</li><li>Decision framework tailored to the issue</li><li>One 7-day micro-plan</li></ul>
-<h3>Supporting material</h3><ul><li>Personalised action plan PDF (sent within 24h)</li><li>Optional 15-min follow-up voice note at day 7</li><li>Curated reading list (2–3 items)</li></ul>
-</div></section>
-
-<section class="section" id="momentum">
-<div class="card"><h2>Momentum Program (Core tier)</h2>
-<p class="muted"><span class="pill gold">$260 • $65/session</span> 4 sessions over 4 weeks + accountability</p>
-<h3>Who it's for</h3><p>Professionals building sustainable leadership habits — want structure, not a one-off.</p>
+<section id="clarity" class="section">
+<div class="card"><h2>Clarity Program <span class="pill">6 weeks • bi-weekly</span></h2>
+<p class="muted">For professionals feeling stuck, overwhelmed or at a crossroads. Focus: identity, direction and first wins.</p>
 <h3>Week-by-week</h3>
-<table><thead><tr><th>Week</th><th>Theme</th><th>Content covered</th><th>Between sessions</th></tr></thead><tbody>
-<tr><td>1</td><td>Baseline &amp; Vision</td><td>Values audit, 90-day vision, leadership self-assessment</td><td>Daily 5-min reflection log</td></tr>
-<tr><td>2</td><td>Focus &amp; Prioritisation</td><td>Eisenhower / ICE prioritisation, calendar audit</td><td>Weekly top-3 exercise</td></tr>
-<tr><td>3</td><td>Communication &amp; Influence</td><td>Stakeholder map, feedback scripts, difficult conversations</td><td>Run 1 planned conversation, debrief</td></tr>
-<tr><td>4</td><td>Habit Lock-in</td><td>Behaviour design, triggers/rewards, 60-day plan</td><td>Commit to 3 keystone habits</td></tr>
-</tbody></table>
-<h3>Supporting material</h3><ul><li>Momentum workbook (PDF, ~25 pages)</li><li>Habit tracker template (Notion + printable)</li><li>Curated podcast/article playlist</li></ul>
-<div class="app-box"><h4>App touchpoint (light)</h4><p>Simple habit check-in &amp; weekly reflection prompts. Nudges between sessions and feeds a progress snapshot to the next session.</p></div>
-</div></section>
-<section class="section" id="adhd">
-<div class="card"><h2>ADHD Focus Program (Core tier)</h2>
-<p class="muted"><span class="pill gold">$475 • $59.4/session</span> 8 sessions over 8 weeks • neurodivergent leaders</p>
-<h3>Who it's for</h3><p>Neurodivergent professionals/leaders who want structure that works with, not against, their wiring.</p>
+<table><tr><th>Week</th><th>Theme</th><th>Session focus</th><th>Materials</th></tr>
+<tr><td>1</td><td>Baseline</td><td>Life/career audit, values map</td><td>Values sort, wheel of life</td></tr>
+<tr><td>2</td><td>Self-awareness</td><td>Strengths, triggers, patterns</td><td>Strengths inventory, reflection journal</td></tr>
+<tr><td>3</td><td>Direction</td><td>Define 1–3 anchor goals</td><td>Goal canvas, 12-month vision</td></tr>
+<tr><td>4</td><td>Obstacles</td><td>Limiting beliefs, inner critic</td><td>Belief reframe worksheet</td></tr>
+<tr><td>5</td><td>First moves</td><td>Small experiments &amp; feedback</td><td>Experiment tracker</td></tr>
+<tr><td>6</td><td>Integration</td><td>Commitments, support system</td><td>30/60/90 plan</td></tr></table>
+</div>
+</section>
+
+<section id="momentum" class="section">
+<div class="card"><h2>Momentum Program <span class="pill">12 weeks • weekly</span> <span class="pill app">App supported</span></h2>
+<p class="muted">For leaders ready to execute. Builds operating rhythm, influence, and leadership range.</p>
 <h3>Week-by-week</h3>
-<table><thead><tr><th>Week</th><th>Theme</th><th>Content covered</th><th>Supporting material</th></tr></thead><tbody>
-<tr><td>1</td><td>Mapping Your Brain</td><td>ADHD profile, energy &amp; focus patterns, dopamine drivers</td><td>Self-assessment + energy map template</td></tr>
-<tr><td>2</td><td>External Scaffolding</td><td>Environment design, visual cues, body-doubling</td><td>Workspace audit checklist</td></tr>
-<tr><td>3</td><td>Task Capture &amp; Triage</td><td>Brain dump, capture systems, one-list rule</td><td>Capture system template</td></tr>
-<tr><td>4</td><td>Time Blindness Tools</td><td>Time boxing, body-doubled sprints, buffer rules</td><td>Time-box planner</td></tr>
-<tr><td>5</td><td>Emotional Regulation</td><td>RSD, rumination loops, reset rituals</td><td>Reset ritual card deck</td></tr>
-<tr><td>6</td><td>Communication at Work</td><td>Disclosure choices, managing up, meeting scripts</td><td>Scripts pack</td></tr>
-<tr><td>7</td><td>Sustainable Performance</td><td>Recovery, sleep, dopamine hygiene</td><td>Weekly recovery plan</td></tr>
-<tr><td>8</td><td>Systems That Stick</td><td>Consolidation, relapse-proofing, 90-day plan</td><td>Personal operating manual (PDF)</td></tr>
-</tbody></table>
-<div class="app-box"><h4>App facilitation during sessions</h4>
-<ul><li>Pre-session: client logs energy/focus + wins/blockers → auto-summary at top of session</li><li>In-session: shared session canvas (task capture, time-box timer, RSD check-in)</li><li>Between sessions: body-doubled sprint invites, habit streaks, RSD SOS coping-card flow</li><li>Data loop: weekly focus-time &amp; mood trends shared with client + coach dashboard</li></ul></div>
-</div></section>
+<table><tr><th>Weeks</th><th>Theme</th><th>Content covered</th><th>Supporting material</th></tr>
+<tr><td>1–2</td><td>Operating system</td><td>Energy, calendar, focus rituals</td><td>Weekly review template</td></tr>
+<tr><td>3–4</td><td>Communication</td><td>Feedback, difficult conversations</td><td>SBI framework, scripts</td></tr>
+<tr><td>5–6</td><td>Boundaries</td><td>Saying no, protecting priorities</td><td>Priority matrix</td></tr>
+<tr><td>7–8</td><td>Decision-making</td><td>Frames, bias, speed vs quality</td><td>Decision journal</td></tr>
+<tr><td>9–10</td><td>Influence</td><td>Stakeholder mapping, narrative</td><td>Stakeholder map canvas</td></tr>
+<tr><td>11–12</td><td>Team leadership</td><td>Delegation, coaching your team</td><td>1:1 playbook</td></tr></table>
+<div class="app-box"><h4>App facilitation</h4><p>Between sessions, the app runs daily 2-minute check-ins, logs decisions and wins, and surfaces patterns to bring into the next session. I see a live pulse of your week; we spend session time on what matters, not status updates.</p></div>
+</div>
+</section>
 
-<section class="section" id="executive">
-<div class="card"><h2>Executive Growth Program (Premium tier)</h2>
-<p class="muted"><span class="pill gold">$625 • $78.1/session</span> 8 sessions over 8 weeks • deeper support</p>
-<h3>Who it's for</h3><p>Senior leaders / founders stepping into broader scope (new role, exec hire, post-funding, IPO prep).</p>
+<section id="adhd" class="section">
+<div class="card"><h2>ADHD Focus Program <span class="pill">12 weeks • weekly</span> <span class="pill app">App supported</span></h2>
+<p class="muted">A coaching track designed for leaders with ADHD. Built around how your brain actually works — not around shame or “discipline”.</p>
 <h3>Week-by-week</h3>
-<table><thead><tr><th>Week</th><th>Theme</th><th>Content covered</th><th>Supporting material</th></tr></thead><tbody>
-<tr><td>1</td><td>360 Baseline</td><td>Stakeholder 360 interviews, leadership identity</td><td>360 report + identity canvas</td></tr>
-<tr><td>2</td><td>Strategic Clarity</td><td>North-star, OKRs, stop-doing list</td><td>Strategy one-pager</td></tr>
-<tr><td>3</td><td>Executive Presence</td><td>Signal, tone, room-reading, storytelling</td><td>Recorded practice + feedback</td></tr>
-<tr><td>4</td><td>High-Stakes Communication</td><td>Board updates, narrative arcs</td><td>Board-deck narrative template</td></tr>
-<tr><td>5</td><td>Team &amp; Talent</td><td>Org design, hire/fire/promote, culture</td><td>Org mapping canvas</td></tr>
-<tr><td>6</td><td>Decision Quality</td><td>Pre-mortems, base rates, reversible vs irreversible</td><td>Decision journal template</td></tr>
-<tr><td>7</td><td>Resilience &amp; Recovery</td><td>Load management, personal advisory board</td><td>Personal board worksheet</td></tr>
-<tr><td>8</td><td>Integration</td><td>Leadership OS v1, 12-month roadmap</td><td>Personal Leadership OS (PDF)</td></tr>
-</tbody></table>
-<div class="app-box"><h4>App facilitation during sessions</h4>
-<ul><li>Pre-session: weekly pulse (decisions, energy, open loops) → AI-summarised agenda</li><li>Live canvas: shared OKR tracker, decision journal, stakeholder map updated in-session</li><li>360 loop: lightweight pulse to 5–8 stakeholders feeds session prep</li><li>Micro-content nudges (5 min) matched to the week’s theme</li></ul></div>
-</div></section>
+<table><tr><th>Weeks</th><th>Theme</th><th>Content covered</th><th>Supporting material</th></tr>
+<tr><td>1–2</td><td>ADHD map</td><td>Your personal pattern, strengths, costs</td><td>ADHD profile worksheet</td></tr>
+<tr><td>3–4</td><td>Environment</td><td>Designing for focus, reducing friction</td><td>Workspace audit</td></tr>
+<tr><td>5–6</td><td>Time &amp; task</td><td>Externalising memory, time-blocking</td><td>Task capture system</td></tr>
+<tr><td>7–8</td><td>Emotional regulation</td><td>RSD, overwhelm, recovery routines</td><td>Regulation toolkit</td></tr>
+<tr><td>9–10</td><td>Executive function</td><td>Starting, switching, finishing</td><td>Start/stop rituals</td></tr>
+<tr><td>11–12</td><td>Leading with ADHD</td><td>Disclosure, team design, sustainability</td><td>Personal operating manual</td></tr></table>
+<div class="app-box"><h4>App facilitation</h4><p>The app acts as an external executive function layer: gentle prompts, task capture, dopamine-aware streaks, and overwhelm check-ins. It reduces the cognitive tax of remembering what matters so session time goes to insight and strategy.</p></div>
+</div>
+</section>
+<section id="executive" class="section">
+<div class="card"><h2>Executive Growth <span class="pill">16 weeks • weekly</span> <span class="pill app">App supported</span></h2>
+<p class="muted">For senior leaders managing complexity, visibility and high-stakes decisions. Deep work on presence, strategy and political acumen.</p>
+<h3>Week-by-week</h3>
+<table><tr><th>Weeks</th><th>Theme</th><th>Content covered</th><th>Supporting material</th></tr>
+<tr><td>1–2</td><td>Executive identity</td><td>Role clarity, brand audit</td><td>Leadership brand canvas</td></tr>
+<tr><td>3–4</td><td>Strategic lens</td><td>Big-picture thinking, systems view</td><td>Strategy mapping tool</td></tr>
+<tr><td>5–6</td><td>Stakeholder mastery</td><td>Board/C-suite dynamics, managing up</td><td>Stakeholder influence map</td></tr>
+<tr><td>7–8</td><td>Executive presence</td><td>Gravitas, concise messaging</td><td>Video review exercises</td></tr>
+<tr><td>9–10</td><td>High-stakes decisions</td><td>Ambiguity, trade-offs, courage</td><td>Decision case studies</td></tr>
+<tr><td>11–12</td><td>Team architecture</td><td>Building senior teams, culture</td><td>Team health diagnostic</td></tr>
+<tr><td>13–14</td><td>Change leadership</td><td>Leading transformation, resistance</td><td>Change playbook</td></tr>
+<tr><td>15–16</td><td>Legacy &amp; sustainability</td><td>Impact, succession, personal renewal</td><td>Leadership legacy letter</td></tr></table>
+<div class="app-box"><h4>App facilitation</h4><p>The app provides a private executive log: captures key decisions, tracks stakeholder dynamics over time, and prepares a session brief so we go deep fast. Includes a confidence/energy tracker and calendar-aware prompts.</p></div>
+</div>
+</section>
 
-<section class="section" id="corporate">
-<div class="card"><h2>Corporate Advisory (Premium tier)</h2>
-<p class="muted"><span class="pill gold">$1,500/month retainer</span> For teams and leadership groups</p>
-<h3>Who it's for</h3><p>Leadership teams, founder + exec groups, or L&amp;D functions rolling out coaching at scale.</p>
-<h3>Monthly rhythm (sample)</h3>
-<table><thead><tr><th>Week</th><th>Activity</th><th>Output</th></tr></thead><tbody>
-<tr><td>1</td><td>Leadership team workshop (90 min) — monthly theme</td><td>Team commitments + focus</td></tr>
-<tr><td>2</td><td>1:1 coaching sessions with 2–3 leaders (60 min each)</td><td>Individual growth plans</td></tr>
-<tr><td>3</td><td>Async advisory — strategic Qs, written feedback on decks/plans</td><td>Written memos</td></tr>
-<tr><td>4</td><td>Review &amp; retro — team dashboard, next month’s theme</td><td>Dashboard snapshot + plan</td></tr>
-</tbody></table>
-<h3>Rotating monthly themes</h3><ul><li>M1 Strategy &amp; alignment • M2 Execution &amp; accountability • M3 Communication &amp; influence • M4 Culture &amp; talent • M5 Resilience • M6 Review &amp; reset</li></ul>
-<div class="app-box"><h4>App facilitation (team dashboard)</h4>
-<ul><li>Team pulse (energy, clarity, alignment) feeds monthly workshop prep</li><li>Shared OKR &amp; commitments tracker visible to the leadership group</li><li>Anonymous friction log surfaces team dynamics safely</li><li>Coach dashboard aggregates across clients for sponsor reporting</li></ul></div>
-</div></section>
-
-<section class="section" id="viz">
-<div class="card"><h2>Skill build over time</h2>
-<p class="muted">Illustrative — cumulative skill gain across a 12-week horizon by tier.</p>
-<div id="chart"></div>
-<p class="muted" style="margin-top:10px">Premium tiers accelerate faster due to app-driven between-session reinforcement and higher session density.</p>
-</div></section>
+<section id="corporate" class="section">
+<div class="card"><h2>Corporate Advisory <span class="pill">Ongoing • retainer</span> <span class="pill app">App supported</span></h2>
+<p class="muted">For organisations investing in leadership pipelines. I work with leadership teams on strategy execution, culture shifts, and executive performance.</p>
+<h3>Typical engagement structure</h3>
+<table><tr><th>Phase</th><th>Duration</th><th>Focus</th><th>Deliverable</th></tr>
+<tr><td>Diagnostic</td><td>2–3 weeks</td><td>Stakeholder interviews, culture scan</td><td>Assessment report</td></tr>
+<tr><td>Design</td><td>1–2 weeks</td><td>Custom program architecture</td><td>Program blueprint</td></tr>
+<tr><td>Delivery</td><td>12–24 weeks</td><td>Group + 1:1 coaching, workshops</td><td>Monthly progress briefs</td></tr>
+<tr><td>Sustain</td><td>Ongoing</td><td>Quarterly reviews, leader check-ins</td><td>ROI dashboard</td></tr></table>
+<div class="app-box"><h4>App facilitation</h4><p>Enterprise dashboard tracks team-level trends: engagement, skill adoption, session attendance. Individual data stays private; aggregate insights help HR and leadership sponsors see impact without violating trust.</p></div>
+</div>
+</section>
+<section id="app" class="section">
+<div class="card">
+<h2>The Coaching App — Concept Mockup</h2>
+<p class="muted">A companion app that sits between sessions, acting as a bridge between your real life and your coaching work.</p>
+<div class="phone">
+<svg viewBox="0 0 320 580" width="320" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="320" height="580" rx="36" fill="#101a33" stroke="#24314f" stroke-width="2"/>
+<rect x="110" y="10" width="100" height="6" rx="3" fill="#24314f"/>
+<rect x="16" y="36" width="288" height="60" rx="12" fill="#0d1730"/>
+<text x="28" y="60" fill="#c9a84c" font-size="16" font-weight="700" font-family="Inter,sans-serif">Good morning, Andrew</text>
+<text x="28" y="82" fill="#b0bedd" font-size="12" font-family="Inter,sans-serif">Week 5 of Momentum • 3 days to next session</text>
+<rect x="16" y="110" width="288" height="80" rx="12" fill="#162547"/>
+<text x="28" y="134" fill="#9fb6ff" font-size="13" font-weight="600" font-family="Inter,sans-serif">Daily Check-in</text>
+<text x="28" y="155" fill="#b0bedd" font-size="12" font-family="Inter,sans-serif">How is your energy right now?</text>
+<rect x="28" y="166" width="50" height="14" rx="7" fill="#5b84ff"/><text x="38" y="176" fill="#fff" font-size="9" font-family="Inter,sans-serif">Low</text>
+<rect x="86" y="166" width="50" height="14" rx="7" fill="#c9a84c"/><text x="93" y="176" fill="#0a1628" font-size="9" font-family="Inter,sans-serif">Medium</text>
+<rect x="144" y="166" width="50" height="14" rx="7" fill="#22c55e"/><text x="155" y="176" fill="#fff" font-size="9" font-family="Inter,sans-serif">High</text>
+<rect x="16" y="204" width="288" height="70" rx="12" fill="#162547"/>
+<text x="28" y="228" fill="#9fb6ff" font-size="13" font-weight="600" font-family="Inter,sans-serif">This week's focus</text>
+<text x="28" y="250" fill="#edf2ff" font-size="12" font-family="Inter,sans-serif">Practise saying no to one low-value meeting</text>
+<text x="28" y="265" fill="#b0bedd" font-size="11" font-family="Inter,sans-serif">Tap to log your attempt</text>
+<rect x="16" y="288" width="288" height="70" rx="12" fill="#162547"/>
+<text x="28" y="312" fill="#9fb6ff" font-size="13" font-weight="600" font-family="Inter,sans-serif">Wins this week</text>
+<text x="28" y="334" fill="#edf2ff" font-size="12" font-family="Inter,sans-serif">Delegated the Q3 report to Amir ✓</text>
+<text x="28" y="350" fill="#b0bedd" font-size="11" font-family="Inter,sans-serif">+ Add a win</text>
+<rect x="16" y="372" width="288" height="50" rx="12" fill="#162547"/>
+<text x="28" y="396" fill="#9fb6ff" font-size="13" font-weight="600" font-family="Inter,sans-serif">Session prep</text>
+<text x="28" y="414" fill="#b0bedd" font-size="12" font-family="Inter,sans-serif">3 items ready for your coach to review</text>
+<rect x="16" y="436" width="288" height="40" rx="12" fill="#0d1730" stroke="#24314f" stroke-width="1"/>
+<text x="28" y="461" fill="#b0bedd" font-size="12" font-family="Inter,sans-serif">Streak: 14 days • Keep going!</text>
+<rect x="16" y="500" width="66" height="50" rx="8" fill="#0d1730"/><text x="32" y="532" fill="#9eb4ea" font-size="10" font-family="Inter,sans-serif">Home</text>
+<rect x="90" y="500" width="66" height="50" rx="8" fill="#0d1730"/><text x="104" y="532" fill="#9eb4ea" font-size="10" font-family="Inter,sans-serif">Journal</text>
+<rect x="164" y="500" width="66" height="50" rx="8" fill="#0d1730"/><text x="179" y="532" fill="#9eb4ea" font-size="10" font-family="Inter,sans-serif">Goals</text>
+<rect x="238" y="500" width="66" height="50" rx="8" fill="#0d1730"/><text x="250" y="532" fill="#9eb4ea" font-size="10" font-family="Inter,sans-serif">Settings</text>
+</svg>
+</div>
+<h3 style="margin-top:24px;">Key features</h3>
+<div class="app-features">
+<div class="app-feature"><h5>Daily check-in</h5><p>2-minute energy, mood &amp; focus pulse. Data builds patterns your coach can see.</p></div>
+<div class="app-feature"><h5>Win tracker</h5><p>Log small wins. The app reminds you what's going well when doubt creeps in.</p></div>
+<div class="app-feature"><h5>Focus of the week</h5><p>One action set by you and your coach. Gentle nudges, not nagging.</p></div>
+<div class="app-feature"><h5>Session prep</h5><p>Auto-generated brief from your week's data. No more blank-page starts.</p></div>
+<div class="app-feature"><h5>ADHD mode</h5><p>Shorter prompts, dopamine streaks, overwhelm check-ins, task capture.</p></div>
+<div class="app-feature"><h5>Enterprise view</h5><p>Aggregate dashboards for HR sponsors. Individual data stays private.</p></div>
+</div>
+</div>
+</section>
 
 <script>
-document.querySelectorAll('.tb').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.tb').forEach(x=>x.classList.remove('active'));
-  document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));
-  b.classList.add('active');
-  document.getElementById(b.dataset.t).classList.add('active');
-  if(b.dataset.t==='viz') drawChart();
-}));
-function drawChart(){
-  const w=[1,2,3,4,5,6,7,8,9,10,11,12];
-  const clarity=[25,28,30,31,31,32,32,32,32,32,32,32];
-  const momentum=[20,32,45,60,63,65,66,66,66,66,66,66];
-  const adhd=[15,25,35,45,55,65,73,80,83,85,86,87];
-  const exec=[20,32,44,56,68,78,86,92,94,95,96,96];
-  const corp=[18,28,40,52,62,70,78,85,90,93,95,96];
-  const t=(n,y,c)=>({x:w,y:y,name:n,mode:'lines+markers',line:{color:c,width:3},marker:{size:7}});
-  Plotly.newPlot('chart',[
-    t('Clarity (1 session)',clarity,'#b0bedd'),
-    t('Momentum',momentum,'#8db4ff'),
-    t('ADHD Focus',adhd,'#5b84ff'),
-    t('Executive Growth',exec,'#c9a84c'),
-    t('Corporate Advisory',corp,'#e4c97a')
-  ],{paper_bgcolor:'#0d1730',plot_bgcolor:'#0d1730',font:{color:'#edf2ff'},xaxis:{title:'Weeks',gridcolor:'#24314f',dtick:1},yaxis:{title:'Cumulative skill build (index)',gridcolor:'#24314f',range:[0,100]},legend:{orientation:'h',y:-0.2},margin:{t:20,l:60,r:20,b:60}},{displayModeBar:false,responsive:true});
-}
+document.querySelectorAll('.tab').forEach(b=>{
+b.addEventListener('click',()=>{
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+b.classList.add('active');
+document.getElementById(b.dataset.t).classList.add('active');
+});
+});
 </script>
-</body></html>
+</body>
+</html>
