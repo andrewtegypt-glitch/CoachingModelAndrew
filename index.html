@@ -52,10 +52,12 @@
         <h1>Andrew Tadros Coaching</h1>
         <p>Executive Excellence & Business Strategy</p>
     </header>
+
     <div class="main-tabs">
         <button id="btn-deck" class="active" onclick="switchMain('deck')">Coaching Model Deck</button>
         <button id="btn-calc" onclick="switchMain('calc')">Financial Calculator</button>
     </div>
+
     <div id="deck-section" class="content-section active">
         <div class="nav">
             <button class="active" onclick="showSection('overview', this)">Overview</button>
@@ -64,6 +66,7 @@
             <button onclick="showSection('financials', this)">Financial Summary</button>
             <button onclick="showSection('charts', this)">Growth Charts</button>
         </div>
+
         <div id="overview" class="section active">
             <div class="hero">
                 <div class="card">
@@ -72,7 +75,7 @@
                     <div class="pill">App access</div>
                     <div class="pill">Free discovery for first 50</div>
                     <h2>Andrew Tadros Coaching</h2>
-                    <p>Executive coaching for ambitious professionals, leaders, and high-potential clients who want clarity, structure, and measurable progress.</p>
+                    <p>Executive coaching for ambitious professionals, leaders, and high-potential clients who want clarity, structure, and measurable progress. Premium tiers include access to a proprietary coaching app for tracking goals and resources.</p>
                     <div>
                         <a href="#financials" class="link" onclick="showSection('financials', document.querySelector('.nav button:nth-child(4)'))">View financials</a> · 
                         <a href="#offer" class="link" onclick="showSection('offer', document.querySelector('.nav button:nth-child(2)'))">See packages</a>
@@ -80,7 +83,7 @@
                 </div>
                 <div class="cta">
                     <h2>Work with me</h2>
-                    <p>Ideal for leaders, founders, and professionals who want practical coaching with a premium feel.</p>
+                    <p>Ideal for leaders, founders, managers, and professionals who want practical coaching with a premium but grounded feel.</p>
                     <a href="#" onclick="showSection('offer', document.querySelector('.nav button:nth-child(2)'))">Explore packages</a>
                 </div>
             </div>
@@ -91,6 +94,7 @@
                 <div class="card"><div class="small">Avg Monthly Net</div><div class="metric">5,724 USD</div><div class="small">301,212 EGP</div></div>
             </div>
         </div>
+
         <div id="offer" class="section">
             <div class="card">
                 <h2>Offer menu</h2>
@@ -108,6 +112,7 @@
                 <p class="note">Per-session clarity shows the effective price per session where the package contains multiple sessions.</p>
             </div>
         </div>
+
         <div id="tiers" class="section">
             <div class="grid">
                 <div class="card"><h3>Free Discovery</h3><p>Free for the first 50 clients, then becomes a paid entry point.</p></div>
@@ -118,6 +123,7 @@
                 <div class="card"><h3>Corporate Advisory</h3><p>Retainer model for leaders, teams, and organizational support.</p></div>
             </div>
         </div>
+
         <div id="financials" class="section">
             <div class="card">
                 <h2>Financial Summary</h2>
@@ -129,16 +135,24 @@
                         <tr><td>Year 1 Net Profit</td><td>68,691</td><td>3,614,541</td></tr>
                         <tr><td>Avg Monthly Revenue</td><td>6,983</td><td>367,441</td></tr>
                         <tr><td>Avg Monthly Net</td><td>5,724</td><td>301,212</td></tr>
+                        <tr><td>Free Discovery Sessions</td><td>50</td><td>2,631</td></tr>
                     </tbody>
                 </table>
             </div>
         </div>
+
         <div id="charts" class="section">
+            <div class="card">
+                <h2>How to use this deck</h2>
+                <p>This HTML deck is built to open on desktop or mobile. Share the file directly, or host it online and send the link. The deck includes your offer ladder, per-session pricing, and year-one financial model in both USD and EGP.</p>
+                <p class="note">You can also repurpose these sections later for a homepage, a one-pager PDF, and a sales brochure.</p>
+            </div>
             <div class="card"><h2>Revenue and Profit Growth</h2><div id="revenueChart" class="chart"></div></div>
             <div class="card"><h2>Revenue Mix</h2><div id="mixChart" class="chart"></div></div>
             <div class="card"><h2>Package Prices</h2><div id="packagesChart" class="chart"></div></div>
         </div>
     </div>
+
     <div id="calc-section" class="content-section">
         <div class="calc-grid">
             <div class="card">
@@ -148,23 +162,23 @@
                     <input type="range" id="discovery" min="0" max="50" value="10" oninput="calc()">
                 </div>
                 <div class="slider-group">
-                    <div class="slider-label"><span>Tier 1 (Individual)</span><strong><span id="tier1-val">5</span> clients</strong></div>
+                    <div class="slider-label"><span>Momentum Program ($260)</span><strong><span id="tier1-val">5</span> clients</strong></div>
                     <input type="range" id="tier1" min="0" max="20" value="5" oninput="calc()">
                 </div>
                 <div class="slider-group">
-                    <div class="slider-label"><span>Tier 2 (Premium)</span><strong><span id="tier2-val">2</span> clients</strong></div>
+                    <div class="slider-label"><span>Executive Program ($625)</span><strong><span id="tier2-val">2</span> clients</strong></div>
                     <input type="range" id="tier2" min="0" max="10" value="2" oninput="calc()">
                 </div>
                 <div class="slider-group">
-                    <div class="slider-label"><span>Tier 3 (Corporate)</span><strong><span id="tier3-val">1</span> contract</strong></div>
+                    <div class="slider-label"><span>Corporate Advisory ($1,500)</span><strong><span id="tier3-val">1</span> contract</strong></div>
                     <input type="range" id="tier3" min="0" max="5" value="1" oninput="calc()">
                 </div>
             </div>
             <div class="card">
                 <h2>Projected Monthly Revenue & Sessions</h2>
-                <div class="result-box"><p>Tier 1 Income: <span id="t1-inc">$0</span> / <span id="t1-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t1-sess">0</span>/mo</div></div>
-                <div class="result-box"><p>Tier 2 Income: <span id="t2-inc">$0</span> / <span id="t2-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t2-sess">0</span>/mo</div></div>
-                <div class="result-box"><p>Tier 3 Income: <span id="t3-inc">$0</span> / <span id="t3-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t3-sess">0</span>/mo</div></div>
+                <div class="result-box"><p>Momentum Income: <span id="t1-inc">$0</span> / <span id="t1-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t1-sess">0</span>/mo</div></div>
+                <div class="result-box"><p>Executive Income: <span id="t2-inc">$0</span> / <span id="t2-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t2-sess">0</span>/mo</div></div>
+                <div class="result-box"><p>Corporate Income: <span id="t3-inc">$0</span> / <span id="t3-inc-egp">0 EGP</span></p><div class="session-count">Sessions needed: <span id="t3-sess">0</span>/mo</div></div>
                 <div class="total-revenue" style="margin-top:20px">
                     Monthly Total: <span id="total-usd">$0</span><br><span id="total-egp" style="font-size:16px;color:#8a9bc2">0 EGP</span>
                     <div style="font-size:14px;margin-top:10px">Total Coaching Sessions: <span id="total-sess">0</span>/mo</div>
@@ -173,8 +187,9 @@
             </div>
         </div>
     </div>
+
     <script>
-        const rates = {t1: 500, t2: 1500, t3: 5000, fx: 48.5, s1: 4, s2: 4, s3: 8};
+        const rates = {t1: 260, t2: 625, t3: 1500, fx: 52.62, s1: 4, s2: 8, s3: 4};
         function switchMain(target){
             document.querySelectorAll('.content-section').forEach(s=>s.classList.remove('active'));
             document.querySelectorAll('.main-tabs button').forEach(b=>b.classList.remove('active'));
@@ -201,7 +216,7 @@
             const r1 = t1 * rates.t1; const r2 = t2 * rates.t2; const r3 = t3 * rates.t3;
             const total = r1 + r2 + r3;
             const sess1 = t1 * rates.s1; const sess2 = t2 * rates.s2; const sess3 = t3 * rates.s3;
-            const totalSess = sess1 + sess2 + sess3;
+            const totalSess = d + sess1 + sess2 + sess3;
             document.getElementById('t1-inc').innerText = '$' + r1.toLocaleString();
             document.getElementById('t1-inc-egp').innerText = (r1 * rates.fx).toLocaleString() + ' EGP';
             document.getElementById('t1-sess').innerText = sess1;
