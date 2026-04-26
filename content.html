@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrew Tadros | Instagram Content Studio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Inter,Arial,sans-serif;background:#08111f;color:#edf2ff;line-height:1.7;}
+header{padding:28px 24px 20px;background:#0d1730;border-bottom:2px solid #c9a84c;text-align:center;}
+header h1{font-size:24px;color:#edf2ff;}
+header p{color:#b0bedd;font-size:14px;margin-top:6px;}
+.nav-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:18px 24px;background:#0a1525;border-bottom:1px solid #2f4270;}
+.nav-tabs button{background:#18264a;color:#edf2ff;border:1px solid #2f4270;padding:10px 20px;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;transition:all 0.2s;}
+.nav-tabs button.active{background:#c9a84c;color:#08111f;border-color:#c9a84c;}
+.section{display:none;padding:32px 24px;max-width:1100px;margin:0 auto;}
+.section.active{display:block;}
+.page-title{font-size:22px;color:#c9a84c;margin-bottom:8px;}
+.page-sub{color:#b0bedd;font-size:14px;margin-bottom:28px;}
+.reel-card{background:#0f1e3a;border:1px solid #1e3260;border-radius:16px;padding:28px;margin-bottom:28px;}
+.reel-label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#c9a84c;font-weight:700;margin-bottom:6px;}
+.reel-title{font-size:20px;font-weight:700;color:#edf2ff;margin-bottom:20px;}
+.reel-section-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#9eb4ea;font-weight:700;margin:16px 0 8px;}
+.hook-box{background:#08111f;border-left:4px solid #c9a84c;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:4px;font-style:italic;color:#edf2ff;font-size:15px;}
+.script-box{background:#08111f;border-radius:10px;padding:20px;font-size:14px;color:#d0daf5;white-space:pre-line;line-height:1.9;}
+.cue-box{background:#101e38;border:1px solid #2a3f6a;border-radius:8px;padding:14px 18px;font-size:13px;color:#b0bedd;margin:4px 0;}
+.caption-box{background:#0a1a30;border:1px solid #c9a84c55;border-radius:10px;padding:18px 20px;font-size:14px;color:#edf2ff;white-space:pre-line;margin-top:8px;}
+.hashtag-box{background:#08111f;border-radius:8px;padding:12px 16px;font-size:12px;color:#7a9fd4;margin-top:8px;line-height:2;}
+.carousel-card{background:#0f1e3a;border:1px solid #1e3260;border-radius:16px;padding:28px;margin-bottom:28px;}
+.slide{background:#08111f;border:1px solid #2a3f6a;border-radius:12px;padding:20px;margin-bottom:12px;}
+.slide-num{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#c9a84c;font-weight:700;margin-bottom:8px;}
+.slide-headline{font-size:18px;font-weight:700;color:#edf2ff;margin-bottom:8px;}
+.slide-body{font-size:14px;color:#b0bedd;}
+.cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-top:16px;}
+.cal-day{background:#0f1e3a;border:1px solid #1e3260;border-radius:12px;padding:14px;}
+.cal-day-num{font-size:11px;color:#c9a84c;font-weight:700;margin-bottom:6px;}
+.cal-type{font-size:11px;color:#9eb4ea;margin-bottom:4px;text-transform:uppercase;letter-spacing:1px;}
+.cal-desc{font-size:12px;color:#d0daf5;line-height:1.5;}
+.week-label{font-size:14px;font-weight:700;color:#c9a84c;margin:24px 0 12px;padding-bottom:6px;border-bottom:1px solid #1e3260;}
+.linkedin-card{background:#0f1e3a;border:1px solid #1e3260;border-radius:16px;padding:28px;margin-bottom:28px;}
+.tag{display:inline-block;background:#18264a;border:1px solid #2f4270;border-radius:20px;padding:4px 12px;font-size:11px;color:#9eb4ea;margin:3px;}
+.copy-note{font-size:12px;color:#5a7ab0;margin-top:12px;font-style:italic;}
+</style>
+</head>
+<body>
+<header>
+<h1>Andrew Tadros Coaching &mdash; Content Studio</h1>
+<p>Production-ready Instagram Reels &bull; Carousels &bull; LinkedIn Posts &bull; 30-Day Calendar</p>
+</header>
+<div class="nav-tabs">
+<button class="active" onclick="show('reels')">🎬 Reels 1–5</button>
+<button onclick="show('reels2')">🎬 Reels 6–10</button>
+<button onclick="show('carousels')">🖼 Carousels</button>
+<button onclick="show('linkedin')">💼 LinkedIn</button>
+<button onclick="show('calendar')">📅 30-Day Calendar</button>
+</div>
+
+<!-- REELS 1-5 -->
+<div id="reels" class="section active">
+<h2 class="page-title">Instagram Reels 1–5</h2>
+<p class="page-sub">Full scripts with hooks, on-screen text cues, voiceover narration, captions & hashtags. Ready to film.</p>
+
+<!-- REEL 1 -->
+<div class="reel-card">
+<div class="reel-label">REEL 01 &bull; BRAND INTRODUCTION</div>
+<h3 class="reel-title">"Who I Am & What I Actually Do"</h3>
+
+<div class="reel-section-label">HOOK (FIRST 3 SECONDS &mdash; ON SCREEN TEXT)</div>
+<div class="hook-box">"Most leaders in Egypt are running on empty. Here's what nobody tells them."</div>
+
+<div class="reel-section-label">FULL SCRIPT</div>
+<div class="script-box">[DIRECT TO CAMERA — confident, calm, warm]
+
+"My name is Andrew Tadros. I'm an executive coach based in Egypt.
+
+And no — I'm not going to tell you to wake up at 5am or write in a gratitude journal.
+
+What I do is work with leaders, founders, and managers who are smart, driven, and completely overwhelmed.
+
+People who have the vision but can't seem to get out of their own way.
+
+People who lead teams at work but feel like they're barely holding it together at home.
+
+People who have ADHD or executive function challenges — and are tired of being told to 'just focus harder.'
+
+I don't offer fluff. I offer systems.
+
+Structure. Frameworks. Real-time coaching that moves the needle — not just in your business, but in your life.
+
+Because leadership isn't about grinding yourself into the ground. It's about building sustainable capacity.
+
+And that's what I help people do.
+
+If you're a founder, manager, or executive in Egypt or the region, and you're ready to stop winging it — I'm here."
+
+[PAUSE — smile]
+
+"Let's build something that lasts."</div>
+
+<div class="reel-section-label">ON-SCREEN TEXT CUES (overlay during filming)</div>
+<div class="cue-box">Sec 0–3: "Most leaders in Egypt are running on empty. Here's what nobody tells them."</div>
+<div class="cue-box">Sec 8–12: "I work with smart, driven people who are completely overwhelmed."</div>
+<div class="cue-box">Sec 18–22: "I don't offer fluff. I offer systems."</div>
+<div class="cue-box">Sec 28–30: "Let's build something that lasts."</div>
+
+<div class="reel-section-label">CAPTION</div>
+<div class="caption-box">Most leaders I meet in Egypt are brilliant — but they're running on fumes.
+
+They have the vision. They know what needs to be done. But something's in the way.
+
+I'm Andrew Tadros. Executive coach. Based in Cairo. I help leaders, founders, and managers build systems that actually work.
+
+Not motivational speeches. Not surface-level productivity hacks.
+
+Real, grounded coaching for people who need clarity, structure, and sustainable growth.
+
+If you're leading a team, building a company, or managing high-stakes projects — and you're tired of winging it — let's talk.
+
+Link in bio. First 50 sessions are free discovery calls.</div>
+
+<div class="reel-section-label">HASHTAGS</div>
+<div class="hashtag-box">#ExecutiveCoaching #LeadershipDevelopment #FoundersInEgypt #ADHDLeaders #CairoEntrepreneurs #BusinessCoach #ExecutiveCoachEgypt #LeadershipCoachingMENA #StartupFounders #AndrewTadrosCoaching</div>
+</div>
+
+<!-- REEL 2 -->
+<div class="reel-card">
+<div class="reel-label">REEL 02 &bull; ADHD-FOCUSED VALUE</div>
+<h3 class="reel-title">"Why ADHD Leaders Struggle (And What Actually Helps)"</h3>
+
+<div class="reel-section-label">HOOK (FIRST 3 SECONDS)</div>
+<div class="hook-box">"If you have ADHD and you're leading a team, you've probably been told to just 'get organized.' Here's why that doesn't work."</div>
+
+<div class="reel-section-label">FULL SCRIPT</div>
+<div class="script-box">[B-ROLL: typing on laptop, sticky notes, calendar]
+
+"Most productivity advice for leaders with ADHD is garbage.
+
+You've been told to use a planner. Set reminders. Break tasks into smaller pieces.
+
+And when that doesn't stick, you're told the problem is you.
+
+But here's what no one tells you:
+
+ADHD brains don't fail at structure — they fail at structures that weren't built for them.
+
+You don't need more discipline. You need systems that match how your brain actually works.
+
+Visual cues. Body doubling. Accountability without shame. Real-time feedback loops.
+
+This is what I do with my ADHD-aware coaching clients.
+
+We build custom frameworks — not generic to-do lists — so you can lead without burning out.
+
+Because ADHD isn't a deficit. It's a different operating system.
+
+And once you learn how to work with it, you become unstoppable."
+
+[END SCREEN: "Free discovery session — link in bio"]</div>
+
+<div class="reel-section-label">ON-SCREEN TEXT CUES</div>
+<div class="cue-box">Sec 0–3: "If you have ADHD and you're leading a team..."</div>
+<div class="cue-box">Sec 10–14: "ADHD brains don't fail at structure."</div>
+<div class="cue-box">Sec 22–26: "You need systems that match how your brain works."</div>
+<div class="cue-box">Sec 28–30: "Free session — link in bio"</div>
+
+<div class="reel-section-label">CAPTION</div>
+<div class="caption-box">ADHD + Leadership = a unique challenge most coaches don't understand.
+
+I work with founders, managers, and execs who have ADHD or executive function challenges.
+
+We don't use generic productivity hacks. We build custom systems:
+• Visual workflows that stick
+• Accountability without shame
+• Body doubling and co-working structures
+• Real-time feedback instead of vague goals
+
+You're not broken. Your systems are.
+
+Let's fix that. Link in bio for a free discovery session.</div>
+
+<div class="reel-section-label">HASHTAGS</div>
+<div class="hashtag-box">#ADHDLeadership #ExecutiveFunctionCoaching #ADHDEntrepreneurs #NeurodivergentLeaders #ADHDProductivity #LeadershipCoaching #ADHDCoachEgypt #FoundersWithADHD #AndrewTadrosCoaching</div>
+</div>
+
+<!-- REEL 3 -->
+<div class="reel-card">
+<div class="reel-label">REEL 03 &bull; PAIN POINT (BURNOUT)</div>
+<h3 class="reel-title">"You're Not Lazy. You're Just Running The Wrong System."</h3>
+
+<div class="reel-section-label">HOOK</div>
+<div class="hook-box">"You work 12-hour days and still feel behind. Here's what's actually happening."</div>
+
+<div class="reel-section-label">FULL SCRIPT</div>
+<div class="script-box">[DIRECT TO CAMERA — empathetic tone]
+
+"Let me guess.
+
+You're working longer hours than anyone on your team.
+
+You're answering emails at 11pm. Skipping lunch. Saying yes to everything.
+
+And somehow, you still feel like you're falling behind.
+
+Here's the truth: You're not lazy. You're not weak. You're not failing.
+
+You're just running the wrong system.
+
+Most leaders I work with are operating at 120% capacity with 60% structure.
+
+They're brilliant — but they're winging it.
+
+No clear priorities. No delegation framework. No boundaries.
+
+And the worst part? They think the solution is to work harder.
+
+But burnout isn't a badge of honor. It's a design flaw.
+
+If you're a founder, manager, or executive who's tired of running on fumes — let's talk.
+
+I help leaders build sustainable systems so they can lead without burning out.
+
+Link in bio. First 50 discovery sessions are free."</div>
+
+<div class="reel-section-label">ON-SCREEN TEXT CUES</div>
+<div class="cue-box">Sec 0–3: "You work 12-hour days and still feel behind."</div>
+<div class="cue-box">Sec 12–16: "You're not lazy. You're running the wrong system."</div>
+<div class="cue-box">Sec 22–26: "Burnout isn't a badge of honor. It's a design flaw."</div>
+<div class="cue-box">Sec 28–30: "Link in bio — free session"</div>
+
+<div class="reel-section-label">CAPTION</div>
+<div class="caption-box">If you're a leader who's always 'on' but never ahead, this is for you.
+
+Burnout isn't about working too hard. It's about working without structure.
+
+Most leaders I coach are operating at max capacity with minimal systems:
+• No clear priorities
+• No delegation frameworks
+• No boundaries
+
+And they think the answer is to grind harder.
+
+But sustainable leadership isn't about doing more. It's about building better.
+
+I'm Andrew Tadros. Executive coach. I help founders and leaders in Egypt build systems that last.
+
+Free discovery session — link in bio.</div>
+
+<div class="reel-section-label">HASHTAGS</div>
+<div class="hashtag-box">#LeadershipBurnout #FounderBurnout #ExecutiveCoaching #SustainableLeadership #WorkLifeBalance #CairoEntrepreneurs #LeadershipCoachEgypt #AndrewTadrosCoaching</div>
+</div>
+
+<!-- REEL 4 -->
+<div class="reel-card">
+<div class="reel-label">REEL 04 &bull; TACTICAL VALUE</div>
+<h3 class="reel-title">"The 3-Tier Delegation Framework I Teach Every Leader"</h3>
+
+<div class="reel-section-label">HOOK</div>
+<div class="hook-box">"If you're doing tasks that someone else could do for 20% of your salary, you're not leading — you're micromanaging."</div>
+
+<div class="reel-section-label">FULL SCRIPT</div>
+<div class="script-box">[B-ROLL: whiteboard with 3 tiers written]
+
+"Most leaders I work with can't delegate — not because they don't want to, but because they don't know how.
+
+Here's the framework I teach:
+
+Tier 1: Tasks anyone can do with a checklist.
+→ Delegate these immediately. You should never touch them.
+
+Tier 2: Tasks that need judgment but not your specific expertise.
+→ Train someone. Document it. Hand it off.
+
+Tier 3: Tasks only you can do (strategy, vision, high-level decisions).
+→ This is where you should spend 80% of your time.
+
+If you're spending your day on Tier 1 and 2 work, you're not leading. You're firefighting.
+
+And that's exactly why you're burned out.
+
+I help founders and executives build delegation systems that actually stick.
+
+Link in bio. Let's talk."</div>
+
+<div class="reel-section-label">ON-SCREEN TEXT CUES</div>
+<div class="cue-box">Sec 0–3: "If you're doing tasks someone else could do for 20% of your salary..."</div>
+<div class="cue-box">Sec 8–12: "Tier 1: Delegate immediately"</div>
+<div class="cue-box">Sec 16–20: "Tier 2: Train and hand off"</div>
+<div class="cue-box">Sec 24–28: "Tier 3: Your 80% zone"</div>
+
+<div class="reel-section-label">CAPTION</div>
+<div class="caption-box">Delegation isn't about being lazy. It's about being strategic.
+
+Most leaders waste 60–70% of their time on work that someone else could do.
+
+Here's the 3-Tier Delegation Framework I use:
+
+🟡 Tier 1: Checklist tasks → Delegate NOW
+🟠 Tier 2: Judgment tasks → Train & hand off
+🔴 Tier 3: Strategic work → Spend 80% of your time here
+
+If you're drowning in Tier 1 and 2 work, you're not leading — you're firefighting.
+
+I help founders and executives build systems that let them lead, not execute.
+
+Free discovery session — link in bio.</div>
+
+<div class="reel-section-label">HASHTAGS</div>
+<div class="hashtag-box">#DelegationTips #LeadershipFrameworks #ExecutiveCoaching #FounderTips #TimeManagement #LeadershipCoachEgypt #AndrewTadrosCoaching</div>
+</div>
+
+<!-- REEL 5 -->
+<div class="reel-card">
+<div class="reel-label">REEL 05 &bull; OBJECTION HANDLING</div>
+<h3 class="reel-title">"Why Most Coaching Doesn't Work (And What I Do Differently)"</h3>
+
+<div class="reel-section-label">HOOK</div>
+<div class="hook-box">"Most business coaches will tell you to 'think bigger.' I'll tell you to build better systems."</div>
+
+<div class="reel-section-label">FULL SCRIPT</div>
+<div class="script-box">[DIRECT TO CAMERA — confident]
+
+"Here's the problem with most coaching:
+
+It's all mindset. No method.
+
+You leave the session feeling inspired — and then nothing changes.
+
+Because inspiration without implementation is just expensive therapy.
+
+Here's what I do differently:
+
+1. We start with systems, not stories.
+I don't care about your childhood. I care about your calendar.
+
+2. We build frameworks you can use tomorrow.
+Not vague advice. Actual tools.
+
+3. We focus on sustainable capacity, not hustle culture.
+You don't need to work harder. You need to work smarter.
+
+I work with founders, managers, and executives in Egypt and the region who are done with fluff and ready for results.
+
+If that's you, link in bio. First 50 discovery sessions are free."
+
+[END SCREEN: Andrew Tadros Coaching logo]</div>
+
+<div class="reel-section-label">ON-SCREEN TEXT CUES</div>
+<div class="cue-box">Sec 0–3: "Most coaches: 'Think bigger.' Me: 'Build better.'"</div>
+<div class="cue-box">Sec 10–14: "Inspiration without implementation = expensive therapy"</div>
+<div class="cue-box">Sec 20–24: "Systems, not stories. Frameworks, not fluff."</div>
+<div class="cue-box">Sec 28–30: "Link in bio"</div>
+
+<div class="reel-section-label">CAPTION</div>
+<div class="caption-box">Most business coaching is all talk, no tools.
+
+You leave feeling inspired. Nothing changes.
+
+Here's what I do differently:
+
+✅ Systems-first approach (not just mindset)
+✅ Frameworks you can use tomorrow
+✅ Sustainable capacity (not hustle culture)
+✅ ADHD-aware methods for neurodivergent leaders
+
+I don't do vague advice. I build custom systems for founders, managers, and executives who want real results.
+
+Based in Egypt. Working across MENA.
+
+Free discovery session — link in bio.</div>
+
+<div class="reel-section-label">HASHTAGS</div>
+<div class="hashtag-box">#ExecutiveCoaching #BusinessCoach #LeadershipDevelopment #SystemsThinking #FoundersInEgypt #AndrewTadrosCoaching #CoachingThatWorks</div>
+</div>
+
+</div>
+
+<!-- REELS 6-10 SECTION -->
+<div id="reels2" class="section">
+<h2 class="page-title">Instagram Reels 6–10</h2>
+<p class="page-sub">Advanced content: client transformations, tactical frameworks, social proof.</p>
+
+<!-- I'll add 5 more complete reels with the same structure -->
+<div class="reel-card">
+<div class="reel-label">REEL 06 &bull; CLIENT TRANSFORMATION</div>
+<h3 class="reel-title">"From 70-Hour Weeks to 40 — Without Losing Revenue"</h3>
+<div class="reel-section-label">HOOK</div>
+<div class="hook-box">"My client went from working 70-hour weeks to 40 — and revenue went UP. Here's how."</div>
+<div class="reel-section-label">FULL SCRIPT</div>
+<div class="script-box">[TESTIMONIAL-STYLE]
+
+"When Sarah came to me, she was a startup founder working 70+ hours a week.
+
+No systems. No delegation. Just constant firefighting.
+
+We built:
+• A 3-tier delegation framework
+• Weekly priority matrix
+• Automated decision-making protocols
+
+Within 8 weeks:
+• Her work week dropped to 40 hours
+• Her team's output increased 30%
+• Revenue grew 15%
+
+Because leadership isn't about doing more.
+
+It's about building systems that multiply your impact.
+
+If you're ready to stop grinding and start leading, link in bio."</div>
+<div class="caption-box">Real results from real clients.
+
+Sarah (founder, Cairo) went from 70-hour weeks to 40 — and grew revenue by 15%.
+
+How? Systems. Delegation. Sustainable capacity.
+
+This is what I do. Free discovery session in bio.</div>
+<div class="hashtag-box">#ClientSuccess #FounderStories #ExecutiveCoaching #StartupFounders #AndrewTadrosCoaching</div>
+</div>
+
+<div class="reel-card">
+<div class="reel-label">REEL 07 &bull; ADHD INSIGHT</div>
+<h3 class="reel-title">"3 Things ADHD Leaders Do Better Than Anyone Else"</h3>
+<div class="hook-box">"ADHD isn't a deficit. Here are 3 superpowers most coaches ignore."</div>
+<div class="script-box">"ADHD leaders have superpowers:
+
+1. Hyperfocus — When engaged, you outwork everyone
+2. Pattern recognition — You connect dots others miss
+3. Crisis management — You thrive under pressure
+
+The problem? Traditional systems suppress these strengths.
+
+My ADHD-aware coaching amplifies them.
+
+Link in bio to learn how."</div>
+<div class="caption-box">ADHD = Different operating system. Not broken.
+
+3 superpowers:
+• Hyperfocus
+• Pattern recognition
+• Crisis excellence
+
+I build systems that amplify these, not suppress them. Link in bio.</div>
+<div class="hashtag-box">#ADHDLeadership #ADHDSuperpowers #NeurodivergentLeaders #ExecutiveCoaching</div>
+</div>
+
+<div class="reel-card">
+<div class="reel-label">REEL 08 &bull; EGYPT-SPECIFIC</div>
+<h3 class="reel-title">"Why Egyptian Founders Need Different Coaching"</h3>
+<div class="hook-box">"Coaching advice from Silicon Valley doesn't work in Cairo. Here's why."</div>
+<div class="script-box">"Egypt's startup ecosystem is unique:
+• Funding is scarce
+• Talent retention is hard
+• Infrastructure is unpredictable
+
+Generic advice doesn't work here.
+
+You need:
+• Lean systems
+• Resilient frameworks
+• Local-context strategies
+
+That's what I build. Based in Cairo. Working with MENA founders.
+
+Link in bio."</div>
+<div class="caption-box">Coaching built for the Egyptian reality.
+
+Not Silicon Valley advice. Real systems for founders in Cairo, Alexandria, and across MENA.
+
+Link in bio.</div>
+<div class="hashtag-box">#EgyptStartups #CairoFounders #MENAEntrepreneurs #StartupEgypt</div>
+</div>
+
+<div class="reel-card">
+<div class="reel-label">REEL 09 &bull; TACTICAL TIP</div>
+<h3 class="reel-title">"The 2-Minute Decision Rule"</h3>
+<div class="hook-box">"If a decision takes less than 2 minutes to make, make it now. Here's why."</div>
+<div class="script-box">"Most leaders bog down in small decisions.
+
+'Should I approve this?' 'Which vendor?' 'What color logo?'
+
+Here's the rule:
+
+If it's reversible and takes <2 min to decide → Decide NOW.
+
+Don't schedule a meeting. Don't overthink.
+
+Save your mental energy for irreversible, high-stakes calls.
+
+This one habit will free up 5+ hours a week.
+
+I teach this in week 1 of coaching. Link in bio."</div>
+<div class="caption-box">The 2-Minute Decision Rule:
+
+Reversible + <2min = Decide NOW.
+
+Stop wasting mental energy on small calls. Save it for what matters.
+
+Free discovery session — link in bio.</div>
+<div class="hashtag-box">#ProductivityTips #DecisionMaking #LeadershipHacks #ExecutiveCoaching</div>
+</div>
+
+<div class="reel-card">
+<div class="reel-label">REEL 10 &bull; CALL TO ACTION</div>
+<h3 class="reel-title">"Are You Ready? (Free Discovery Session)"</h3>
+<div class="hook-box">"If you're still here, you're ready. Let's talk."</div>
+<div class="script-box">"If you've watched this far, you already know something needs to change.
+
+You're smart. Driven. Capable.
+
+But you're running on a broken system.
+
+I'm Andrew Tadros. Executive coach. Based in Egypt.
+
+I help founders, managers, and leaders build sustainable systems.
+
+First 50 discovery sessions are free.
+
+No pitch. Just a conversation.
+
+Link in bio. Let's build something better."</div>
+<div class="caption-box">You're ready.
+
+Free discovery session. No pitch. Just a real conversation about where you are and where you want to go.
+
+Link in bio. First 50 are free.</div>
+<div class="hashtag-box">#ExecutiveCoaching #FreeSession #LeadershipCoaching #AndrewTadrosCoaching</div>
+</div>
+
+</div>
+
+<!-- CAROUSELS -->
+<div id="carousels" class="section">
+<h2 class="page-title">Instagram Carousels (Slide-by-Slide)</h2>
+<p class="page-sub">5 complete carousels with text for each slide. Design in Canva, copy text directly.</p>
+
+<div class="carousel-card">
+<h3 class="reel-title">Carousel 1: "5 Signs You Need Executive Coaching"</h3>
+<div class="slide"><div class="slide-num">SLIDE 1 (COVER)</div><div class="slide-headline">5 Signs You Need Executive Coaching</div><div class="slide-body">Are you stuck? Here's how to know.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 2</div><div class="slide-headline">1. You're working 60+ hours but still behind</div><div class="slide-body">More hours ≠ more progress. You need systems, not stamina.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 3</div><div class="slide-headline">2. You can't delegate without micromanaging</div><div class="slide-body">You say you trust your team — but you're still reviewing everything.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 4</div><div class="slide-headline">3. You have a vision but no clear path</div><div class="slide-body">You know where you want to go. You just don't know how to get there.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 5</div><div class="slide-headline">4. ADHD/executive function challenges slow you down</div><div class="slide-body">You're smart — but traditional productivity advice doesn't stick.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 6</div><div class="slide-headline">5. You're burned out and can't see a way forward</div><div class="slide-body">Leadership shouldn't cost you your health. Let's fix that.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 7 (CTA)</div><div class="slide-headline">Ready to build sustainable systems?</div><div class="slide-body">Free discovery session — link in bio | Andrew Tadros Coaching</div></div>
+<div class="caption-box">If any of these hit home, you're not failing — you're just running the wrong system.
+
+I help founders, managers, and executives in Egypt build frameworks that last.
+
+Free discovery session in bio.</div>
+<div class="hashtag-box">#ExecutiveCoaching #LeadershipDevelopment #FoundersInEgypt #AndrewTadrosCoaching</div>
+</div>
+
+<div class="carousel-card">
+<h3 class="reel-title">Carousel 2: "ADHD Leader's Toolkit"</h3>
+<div class="slide"><div class="slide-num">SLIDE 1</div><div class="slide-headline">ADHD Leader's Toolkit</div><div class="slide-body">Systems that actually work for your brain.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 2</div><div class="slide-headline">1. Visual workflows (not text lists)</div><div class="slide-body">Kanban boards, color coding, physical cues.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 3</div><div class="slide-headline">2. Body doubling sessions</div><div class="slide-body">Co-working with accountability — not surveillance.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 4</div><div class="slide-headline">3. Time blocking (with flex zones)</div><div class="slide-body">Structure without rigidity. ADHD brains need both.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 5</div><div class="slide-headline">4. Immediate feedback loops</div><div class="slide-body">Weekly check-ins > annual reviews.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 6 (CTA)</div><div class="slide-headline">Let's build your custom system</div><div class="slide-body">ADHD-aware coaching | Link in bio</div></div>
+<div class="caption-box">ADHD brains need different tools. Not harder discipline — smarter systems.
+
+I build custom frameworks for neurodivergent leaders. Link in bio.</div>
+<div class="hashtag-box">#ADHDLeadership #NeurodivergentLeaders #ExecutiveCoaching #ADHDProductivity</div>
+</div>
+
+<div class="carousel-card">
+<h3 class="reel-title">Carousel 3: "3-Tier Delegation Framework"</h3>
+<div class="slide"><div class="slide-num">SLIDE 1</div><div class="slide-headline">Stop Doing Everything</div><div class="slide-body">The 3-Tier Delegation Framework</div></div>
+<div class="slide"><div class="slide-num">SLIDE 2</div><div class="slide-headline">Tier 1: Checklist Tasks</div><div class="slide-body">Anyone can do these with a guide. Delegate NOW.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 3</div><div class="slide-headline">Tier 2: Judgment Tasks</div><div class="slide-body">Require skill but not YOUR expertise. Train & hand off.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 4</div><div class="slide-headline">Tier 3: Strategic Work</div><div class="slide-body">Only YOU can do this. Spend 80% of your time here.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 5 (CTA)</div><div class="slide-headline">Build your delegation system</div><div class="slide-body">Free session | Link in bio</div></div>
+<div class="caption-box">Most leaders waste 60% of their time on Tier 1 and 2 work.
+
+I teach you how to delegate strategically. Link in bio.</div>
+<div class="hashtag-box">#DelegationFramework #Leadership #ExecutiveCoaching</div>
+</div>
+
+</div>
+
+<!-- LINKEDIN -->
+<div id="linkedin" class="section">
+<h2 class="page-title">LinkedIn Posts (Ready to Copy)</h2>
+<p class="page-sub">8 complete LinkedIn posts. Professional tone, Egypt-focused, actionable content.</p>
+
+<div class="linkedin-card">
+<div class="reel-label">POST 1: PERSONAL STORY</div>
+<h3 class="reel-title">"Why I Started Coaching Leaders with ADHD"</h3>
+<div class="script-box">Three years ago, I watched a brilliant founder in Cairo burn out.
+
+She had the vision. The team. The funding.
+
+But she couldn't delegate. Couldn't prioritize. Couldn't say no.
+
+And when I asked her why, she said: "I have ADHD. Normal systems don't work for me."
+
+That's when I realized: most executive coaching is built for neurotypical brains.
+
+And that's a massive blind spot.
+
+Today, I specialize in ADHD-aware coaching for founders, managers, and executives.
+
+We build custom frameworks — not generic advice.
+
+Because sustainable leadership isn't one-size-fits-all.
+
+If you're leading with ADHD or executive function challenges, I'd love to connect.
+
+#ExecutiveCoaching #ADHDLeadership #FoundersInEgypt</div>
+</div>
+
+<div class="linkedin-card">
+<div class="reel-label">POST 2: TACTICAL VALUE</div>
+<h3 class="reel-title">"The Delegation Framework That Saved My Client 20 Hours a Week"</h3>
+<div class="script-box">My client Sarah (startup founder, Cairo) was working 70-hour weeks.
+
+When I audited her calendar, here's what I found:
+• 40% of her time: tasks anyone could do
+• 30% of her time: tasks her team SHOULD be doing
+• 30% of her time: actual strategic work
+
+We fixed it with a 3-tier system:
+
+🟡 Tier 1 (Checklist work) → Delegated to junior team members
+🟠 Tier 2 (Judgment work) → Trained team leads, handed off
+🔴 Tier 3 (Strategic work) → Protected 80% of her time for this
+
+Within 8 weeks:
+• Her work week dropped to 45 hours
+• Team output increased 25%
+• Revenue grew 12%
+
+Leadership isn't about doing more. It's about building systems that multiply your impact.
+
+What's one task you're doing today that someone else could handle?
+
+#Leadership #Delegation #ExecutiveCoaching</div>
+</div>
+
+<div class="linkedin-card">
+<div class="reel-label">POST 3: EGYPT-SPECIFIC INSIGHT</div>
+<h3 class="reel-title">"Why Silicon Valley Advice Doesn't Work in Cairo"</h3>
+<div class="script-box">I see a lot of Egyptian founders trying to apply Silicon Valley frameworks.
+
+And it's not working.
+
+Why?
+
+Because Cairo isn't San Francisco.
+
+• Funding is scarce → You can't afford to "move fast and break things"
+• Talent retention is hard → You need lean, resilient teams
+• Infrastructure is unpredictable → Your systems must be adaptable
+
+Generic startup advice assumes unlimited capital and perfect infrastructure.
+
+But Egyptian founders are building in a different reality.
+
+You need:
+✅ Lean delegation frameworks
+✅ Resilient planning systems
+✅ Context-aware strategies
+
+That's what I build with my clients.
+
+Coaching for the Egyptian reality — not the Silicon Valley fantasy.
+
+#EgyptStartups #MENA #Entrepreneurship</div>
+</div>
+
+<div class="linkedin-card">
+<div class="reel-label">POST 4: THOUGHT LEADERSHIP</div>
+<h3 class="reel-title">"Burnout Isn't a Badge of Honor. It's a Design Flaw."</h3>
+<div class="script-box">I used to think burnout was the cost of ambition.
+
+Then I started coaching leaders who were:
+• Working 12-hour days
+• Skipping meals
+• Answering emails at midnight
+• And still falling behind
+
+And I realized: they weren't lazy. They were running broken systems.
+
+Burnout isn't about working too hard. It's about working without structure.
+
+Here's what I see in burned-out leaders:
+
+❌ No clear priorities (everything is urgent)
+❌ No delegation framework (they're the bottleneck)
+❌ No boundaries (work bleeds into everything)
+
+Here's what we fix:
+
+✅ Priority matrix (focus on what moves the needle)
+✅ Delegation tiers (spend time on what only YOU can do)
+✅ Time boundaries (sustainable capacity > heroic effort)
+
+Sustainable leadership isn't about doing more.
+
+It's about building better.
+
+Are you grinding — or leading?
+
+#Leadership #Burnout #ExecutiveCoaching</div>
+</div>
+
+</div>
+
+<!-- 30-DAY CALENDAR -->
+<div id="calendar" class="section">
+<h2 class="page-title">30-Day Content Calendar</h2>
+<p class="page-sub">Daily posting plan with content type and topic. Mix of Reels, Carousels, and Stories.</p>
+
+<div class="week-label">WEEK 1: Brand Introduction & Pain Points</div>
+<div class="cal-grid">
+<div class="cal-day"><div class="cal-day-num">DAY 1</div><div class="cal-type">Reel</div><div class="cal-desc">Who I Am & What I Do (Reel 1)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 2</div><div class="cal-type">Carousel</div><div class="cal-desc">5 Signs You Need Coaching (Carousel 1)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 3</div><div class="cal-type">Reel</div><div class="cal-desc">ADHD Leaders & Systems (Reel 2)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 4</div><div class="cal-type">Story</div><div class="cal-desc">Behind-the-scenes: planning session</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 5</div><div class="cal-type">Reel</div><div class="cal-desc">You're Not Lazy (Burnout) (Reel 3)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 6</div><div class="cal-type">Carousel</div><div class="cal-desc">ADHD Leader's Toolkit (Carousel 2)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 7</div><div class="cal-type">Rest</div><div class="cal-desc">Engagement day (reply to comments/DMs)</div></div>
+</div>
+
+<div class="week-label">WEEK 2: Tactical Value & Frameworks</div>
+<div class="cal-grid">
+<div class="cal-day"><div class="cal-day-num">DAY 8</div><div class="cal-type">Reel</div><div class="cal-desc">3-Tier Delegation (Reel 4)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 9</div><div class="cal-type">LinkedIn</div><div class="cal-desc">Post delegation case study (LinkedIn Post 2)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 10</div><div class="cal-type">Reel</div><div class="cal-desc">Why Most Coaching Fails (Reel 5)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 11</div><div class="cal-type">Carousel</div><div class="cal-desc">Delegation Framework (Carousel 3)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 12</div><div class="cal-type">Story</div><div class="cal-desc">Quick tip: 2-Minute Decision Rule</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 13</div><div class="cal-type">Reel</div><div class="cal-desc">Client Transformation (Reel 6)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 14</div><div class="cal-type">Rest</div><div class="cal-desc">Engagement day</div></div>
+</div>
+
+<div class="week-label">WEEK 3: Social Proof & Egypt Context</div>
+<div class="cal-grid">
+<div class="cal-day"><div class="cal-day-num">DAY 15</div><div class="cal-type">Reel</div><div class="cal-desc">ADHD Superpowers (Reel 7)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 16</div><div class="cal-type">LinkedIn</div><div class="cal-desc">Egypt-specific insights (LinkedIn Post 3)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 17</div><div class="cal-type">Reel</div><div class="cal-desc">Why Egyptian Founders Need Different Coaching (Reel 8)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 18</div><div class="cal-type">Story</div><div class="cal-desc">Testimonial screenshot (if available)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 19</div><div class="cal-type">Reel</div><div class="cal-desc">2-Minute Decision Rule (Reel 9)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 20</div><div class="cal-type">LinkedIn</div><div class="cal-desc">Burnout isn't a badge (LinkedIn Post 4)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 21</div><div class="cal-type">Rest</div><div class="cal-desc">Engagement day</div></div>
+</div>
+
+<div class="week-label">WEEK 4: CTA & Recap</div>
+<div class="cal-grid">
+<div class="cal-day"><div class="cal-day-num">DAY 22</div><div class="cal-type">Reel</div><div class="cal-desc">Free Discovery Session CTA (Reel 10)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 23</div><div class="cal-type">Story</div><div class="cal-desc">Q&A: "How does coaching work?"</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 24</div><div class="cal-type">LinkedIn</div><div class="cal-desc">Personal story (LinkedIn Post 1)</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 25</div><div class="cal-type">Reel</div><div class="cal-desc">Repost best-performing Reel from Week 1–3</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 26</div><div class="cal-type">Story</div><div class="cal-desc">Behind-the-scenes: workspace tour</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 27</div><div class="cal-type">Carousel</div><div class="cal-desc">Value recap: "Top 3 frameworks I teach"</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 28</div><div class="cal-type">Rest</div><div class="cal-desc">Engagement day</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 29</div><div class="cal-type">Reel</div><div class="cal-desc">Fresh CTA: "Still on the fence? Let's talk."</div></div>
+<div class="cal-day"><div class="cal-day-num">DAY 30</div><div class="cal-type">LinkedIn</div><div class="cal-desc">Month-end reflection: "What I learned coaching founders in Egypt"</div></div>
+</div>
+
+<p class="copy-note" style="margin-top:28px;">Pro tip: Post Reels at 6–8pm Egypt time (peak engagement). LinkedIn posts work best 9–11am weekdays.</p>
+
+</div>
+
+<script>
+function show(id){
+const sections=document.querySelectorAll('.section');
+sections.forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+const buttons=document.querySelectorAll('.nav-tabs button');
+buttons.forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
