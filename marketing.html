@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrew Tadros | Marketing Hub</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Inter,Arial,sans-serif;background:#08111f;color:#edf2ff;line-height:1.6;}
+header{padding:24px 32px;background:#0d1730;border-bottom:2px solid #c9a84c;text-align:center;}
+header h1{font-size:22px;color:#edf2ff;}
+header p{color:#b0bedd;font-size:14px;margin-top:4px;}
+.nav-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:16px 24px;background:#0a1525;border-bottom:1px solid #24314f;position:sticky;top:0;z-index:100;}
+.nav-tabs button{background:#18264a;color:#edf2ff;border:1px solid #2f4270;padding:9px 18px;border-radius:10px;cursor:pointer;font-size:13px;font-weight:600;transition:all 0.2s;}
+.nav-tabs button.active{background:#c9a84c;color:#08111f;border-color:#c9a84c;}
+.section{display:none;padding:32px 24px;max-width:1000px;margin:0 auto;}
+.section.active{display:block;}
+.card{background:#101a33;border:1px solid #24314f;border-radius:16px;padding:24px;margin-bottom:20px;}
+.card h2{font-size:20px;color:#c9a84c;margin-bottom:12px;}
+.card h3{font-size:16px;color:#9eb4ea;margin-bottom:8px;margin-top:16px;}
+.reel{background:#0d1d3a;border-left:4px solid #c9a84c;border-radius:0 12px 12px 0;padding:20px;margin-bottom:20px;}
+.reel-num{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#c9a84c;font-weight:700;margin-bottom:6px;}
+.reel-title{font-size:18px;font-weight:700;color:#edf2ff;margin-bottom:12px;}
+.reel-hook{background:#08111f;border-radius:8px;padding:14px;margin-bottom:12px;font-style:italic;color:#dbe5ff;font-size:15px;border-left:3px solid #5b84ff;}
+.label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#9eb4ea;font-weight:700;margin-bottom:6px;margin-top:14px;}
+.script-line{color:#edf2ff;margin-bottom:6px;font-size:14px;}
+.format-tag{display:inline-block;background:#162547;color:#dbe5ff;font-size:11px;padding:4px 10px;border-radius:999px;margin-right:6px;margin-top:6px;border:1px solid #2f4270;}
+.slide{background:#0a1a35;border:1px solid #2f4270;border-radius:12px;padding:16px;margin-bottom:12px;}
+.slide-num{font-size:11px;color:#c9a84c;font-weight:700;letter-spacing:1px;margin-bottom:4px;}
+.slide-text{font-size:15px;color:#edf2ff;}
+.slide-note{font-size:12px;color:#9eb4ea;margin-top:6px;}
+.linkedin-post{background:#0d1d3a;border-radius:12px;padding:20px;margin-bottom:20px;border:1px solid #2f4270;}
+.lp-type{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#5b84ff;font-weight:700;margin-bottom:8px;}
+.lp-body{font-size:14px;color:#edf2ff;white-space:pre-wrap;line-height:1.8;}
+.fb-ad{background:#0d1d3a;border-radius:12px;padding:20px;margin-bottom:20px;border:1px solid #2f4270;}
+.ad-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:#e86b4f;font-weight:700;margin-bottom:8px;}
+.cal-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:13px;}
+.cal-table th{background:#18264a;color:#c9a84c;padding:10px 12px;text-align:left;border-bottom:2px solid #c9a84c;}
+.cal-table td{padding:10px 12px;border-bottom:1px solid #1a2c4f;vertical-align:top;}
+.cal-table tr:hover td{background:#111f3a;}
+.badge{display:inline-block;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:700;margin-right:4px;}
+.ig{background:#8b2fc9;color:#fff;}
+.li{background:#0a66c2;color:#fff;}
+.fb{background:#1877f2;color:#fff;}
+.tt{background:#010101;color:#fff;border:1px solid #333;}
+.wa{background:#25d366;color:#000;}
+.wk-header{background:#c9a84c;color:#08111f;font-weight:700;padding:8px 12px;border-radius:8px;margin:20px 0 8px;font-size:13px;display:inline-block;}
+.platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:16px;}
+.platform-card{background:#0d1d3a;border:1px solid #2f4270;border-radius:12px;padding:16px;text-align:center;}
+.platform-card .icon{font-size:28px;margin-bottom:8px;}
+.platform-card h4{font-size:14px;color:#edf2ff;margin-bottom:4px;}
+.platform-card p{font-size:12px;color:#9eb4ea;}
+.bio-box{background:#08111f;border:1px solid #c9a84c;border-radius:10px;padding:16px;font-family:monospace;font-size:14px;color:#edf2ff;margin-top:12px;line-height:1.9;}
+.tip{background:#0a1f0a;border-left:3px solid #4caf50;border-radius:0 8px 8px 0;padding:12px 16px;font-size:13px;color:#b8e6b8;margin-top:12px;}
+a{color:#c9a84c;}
+</style>
+</head>
+<body>
+<header>
+<h1>Andrew Tadros Coaching &mdash; Marketing Hub</h1>
+<p>Instagram &bull; LinkedIn &bull; Facebook &bull; TikTok &bull; WhatsApp &mdash; Full Content Library</p>
+</header>
+<div class="nav-tabs">
+<button class="active" onclick="showSection('reels',this)">🎬 Reel Scripts</button>
+<button onclick="showSection('carousels',this)">🖼 Carousels</button>
+<button onclick="showSection('linkedin',this)">💼 LinkedIn</button>
+<button onclick="showSection('fbads',this)">📣 Facebook Ads</button>
+<button onclick="showSection('calendar',this)">📅 30-Day Calendar</button>
+<button onclick="showSection('setup',this)">⚙️ Profile Setup</button>
+</div>
+
+<!-- REEL SCRIPTS -->
+<div id="reels" class="section active">
+<div class="card">
+<h2>🎬 Instagram Reel Scripts (10 Full Scripts)</h2>
+<p style="color:#9eb4ea;font-size:13px;">Each script includes hook, full narration, on-screen text cues, format notes, and caption with hashtags. Designed for 30–60 second delivery. Film in good light, facing camera, subtitled in English (Arabic optional for wider reach).</p>
+</div>
+
+<div class="reel">
+<div class="reel-num">Reel 01 &bull; Brand Introduction</div>
+<div class="reel-title">"Who I Am &amp; What I Actually Do"</div>
+<div class="label">Hook (first 3 seconds — on screen text)</div>
+<div class="reel-hook">"Most leaders in Egypt are running on empty. Here's what nobody tells them."</div>
+<div class="label">Full Script</div>
+<p class="script-line">[DIRECT TO CAMERA — confident, calm, warm]</p>
+<p class="script-line">"My name is Andrew Tadros. I'm an executive coach based in Egypt.</p>
+<p class="script-line">And no — I'm not going to tell you to wake up at 5am or write in a gratitude journal.</p>
+<p class="script-line">What I do is work with leaders, founders, and managers who are smart, driven, and completely overwhelmed.</p>
+<p class="script-line">People who have the vision but can't seem to get out of their own way.</p>
+<p class="script-line">People who lead teams at work but feel like they're barely holding it together at home.</p>
+<p class="script-line">We work together on clarity, structure, and real measurable progress.</p>
+<p class="script-line">No fluff. No generic advice. No one-size-fits-all.</p>
+<p class="script-line">If that sounds like what you need — I'm offering free discovery sessions right now to the first 50 people who reach out.</p>
+<p class="script-line">Link is in the bio. Let's talk."</p>
+<div class="label">Format Notes</div>
+<span class="format-tag">Talking head</span><span class="format-tag">45 seconds</span><span class="format-tag">Subtitled</span><span class="format-tag">Clean background</span>
+<div class="label">Caption</div>
+<p class="script-line">Executive coaching isn't a luxury. It's the thing that separates leaders who plateau from leaders who grow. I work with ambitious professionals across Egypt and the region. Free discovery session — first 50 only. Link in bio.
+.
+.
+#ExecutiveCoach #EgyptLeaders #CoachingEgypt #LeadershipDevelopment #ExecutiveCoaching #CairoLeaders #ADHDLeadership #ProfessionalGrowth #MindsetCoach #BusinessLeaders</p>
+</div>
+
+<div class="reel">
+<div class="reel-num">Reel 02 &bull; ADHD Pillar</div>
+<div class="reel-title">"ADHD in the Boardroom: Your Secret Weapon"</div>
+<div class="label">Hook (on screen text)</div>
+<div class="reel-hook">"They told you ADHD was your weakness. They were wrong."</div>
+<div class="label">Full Script</div>
+<p class="script-line">[TEXT SLIDES with calm voiceover]</p>
+<p class="script-line">"Some of the most powerful leaders I've worked with have ADHD.</p>
+<p class="script-line">They're not successful despite their ADHD. They're successful because of how they've learned to channel it.</p>
+<p class="script-line">The hyperfocus that lets them obsess over a problem until it's solved.</p>
+<p class="script-line">The pattern recognition that sees what others miss.</p>
+<p class="script-line">The energy that drives a room when it's pointed in the right direction.</p>
+<p class="script-line">But without the right structure? That same brain can become your biggest obstacle.</p>
+<p class="script-line">Executive coaching for ADHD leaders isn't about fixing you. It's about building systems that work with your brain, not against it.</p>
+<p class="script-line">If you lead with ADHD — or think you might — let's talk."</p>
+<div class="label">Format Notes</div>
+<span class="format-tag">Text slides + voiceover</span><span class="format-tag">30–45 seconds</span><span class="format-tag">Dark background</span><span class="format-tag">Calm music</span>
+<div class="label">Caption</div>
+<p class="script-line">ADHD leadership is underrepresented in Egypt's professional world. Let's change that. I work with executives and founders who think differently — and turn that into their edge.
+.
+.
+#ADHDLeadership #ADHDAwareness #ExecutiveADHD #NeurodivergentLeaders #ADHDCoach #CoachingEgypt #LeadershipEgypt #ADHDAdults #MentalHealthLeadership #EgyptBusiness</p>
+</div>
+
+<div class="reel">
+<div class="reel-num">Reel 03 &bull; High Value Tip</div>
+<div class="reel-title">"The 3-Question Reset Every Leader Needs"</div>
+<div class="label">Hook (on screen text)</div>
+<div class="reel-hook">"Feeling overwhelmed? Ask yourself these 3 questions before anything else."</div>
+<div class="label">Full Script</div>
+<p class="script-line">[DIRECT TO CAMERA — slow and deliberate, let questions land]</p>
+<p class="script-line">"When a client comes to me completely overwhelmed, I don't give them a to-do list.</p>
+<p class="script-line">I ask them three questions. And the answers always unlock everything.</p>
+<p class="script-line">[Hold up finger 1] Number one: What am I actually trying to achieve in the next 90 days — not the next 90 years?</p>
+<p class="script-line">[Hold up finger 2] Number two: What is the one thing I'm doing right now that is actively working against that?</p>
+<p class="script-line">[Hold up finger 3] Number three: What would I do if I wasn't afraid of getting it wrong?</p>
+<p class="script-line">Sit with those. Write them down. Don't rush the answers.</p>
+<p class="script-line">That's where the real work begins."</p>
+<div class="label">Format Notes</div>
+<span class="format-tag">Talking head</span><span class="format-tag">50 seconds</span><span class="format-tag">Number text overlays</span><span class="format-tag">Save bait</span>
+<div class="label">Caption</div>
+<p class="script-line">Save this. Come back to it next time you feel stuck. These 3 questions have unlocked more breakthroughs in my sessions than any framework I've ever used. DM me if you want to explore what comes up.
+.
+.
+#LeadershipTips #ExecutiveCoach #CoachingEgypt #ClarityCoach #LeadershipMindset #ProfessionalDevelopment #EgyptLeaders #BusinessGrowth #MindsetMatters #LeadershipTools</p>
+</div>
+
+<div class="reel">
+<div class="reel-num">Reel 04 &bull; Myth Busting</div>
+<div class="reel-title">"What Executive Coaching Is NOT"</div>
+<div class="label">Hook (on screen text)</div>
+<div class="reel-hook">"Stop confusing executive coaching with these 4 things."</div>
+<div class="label">Full Script</div>
+<p class="script-line">[RAPID TEXT CARDS — one every 4 seconds, then talking head close]</p>
+<p class="script-line">Card 1: Executive coaching is NOT therapy. [subtitle: We don't process your past. We build your future.]</p>
+<p class="script-line">Card 2: Executive coaching is NOT mentoring. [subtitle: I don't tell you what I did. I help you figure out what YOU need to do.]</p>
+<p class="script-line">Card 3: Executive coaching is NOT consulting. [subtitle: I don't hand you a strategy deck. I help you think clearly enough to build your own.]</p>
+<p class="script-line">Card 4: Executive coaching is NOT for people who are struggling. [subtitle: It's for people who are already good — and want to be exceptional.]</p>
+<p class="script-line">[Back to camera] "If that's you — link in bio. First 50 discovery sessions are free."</p>
+<div class="label">Format Notes</div>
+<span class="format-tag">Text cards + camera</span><span class="format-tag">35 seconds</span><span class="format-tag">Bold white text on dark</span><span class="format-tag">Share bait</span>
+<div class="label">Caption</div>
+<p class="script-line">The most common thing I hear: "I thought coaching was for people who were lost." It's not. It's for people who are already winning and want to win bigger. Free discovery session link in bio.
+.
+.
+#ExecutiveCoaching #CoachingMyths #LeadershipDevelopment #CoachingEgypt #WhatIsCoaching #ProfessionalGrowth #CairoLeaders #BusinessLeadership #LeadershipSkills #EgyptProfessionals</p>
+</div>
+
+<div class="reel">
+<div class="reel-num">Reel 05 &bull; Local Context</div>
+<div class="reel-title">"The Cairo Leader Challenge"</div>
+<div class="label">Hook (on screen text)</div>
+<div class="reel-hook">"Leading a business in Egypt comes with problems no Western book covers."</div>
+<div class="label">Full Script</div>
+<p class="script-line">[DIRECT TO CAMERA — conversational, local, relatable]</p>
+<p class="script-line">"If you're leading a business or a team in Egypt, you're dealing with something very specific.</p>
+<p class="script-line">You're navigating family expectations alongside professional ambitions.</p>
+<p class="script-line">You're managing teams in a culture where hierarchy and relationships matter just as much as performance.</p>
+<p class="script-line">You're building in an economy that moves fast and shifts without warning.</p>
+<p class="script-line">And you're probably doing all of this without a single peer who genuinely understands your situation.</p>
+<p class="script-line">That's exactly why I coach here — in Egypt, for Egyptian and regional leaders.</p>
+<p class="script-line">Because what works in a Harvard case study doesn't always work in Maadi or the Fifth Settlement.</p>
+<p class="script-line">I get that. And that's where we start."</p>
+<div class="label">Format Notes</div>
+<span class="format-tag">Talking head</span><span class="format-tag">50 seconds</span><span class="format-tag">Authentic tone</span><span class="format-tag">Local references</span>
+<div class="label">Caption</div>
+<p class="script-line">There's a specific kind of pressure that comes with leading in Egypt. I coach leaders who feel it every day. If you're building something here and want support that actually fits your context — let's talk. Link in bio.
+.
+.
+#EgyptLeaders #CairoLeaders #EgyptBusiness #LeadershipEgypt #ExpatLeaders #MiddleEastLeaders #CairoBusiness #EgyptEntrepreneurs #RegionalLeadership #CoachingEgypt</p>
+</div>
+
+<div class="reel">
+<div class="reel-num">Reel 06 &bull; Behind the Scenes</div>
+<div class="reel-title">"What Actually Happens in a Coaching Session"</div>
+<div class="label">Hook (on screen text)</div>
+<div class="reel-hook">"What does an executive coaching session actually look like? Here's the truth."</div>
+<div class="label">Full Script</div>
+<p class="script-line">[WALKTHROUGH FORMAT — calm, structured]</p>
+<p class="script-line">"I get asked this all the time: what actually happens when we work together?</p>
+<p class="script-line">The first five minutes: you tell me what's on your mind. No agenda. No pressure. Just what's real right now.</p>
+<p class="script-line">The next twenty minutes: we go deep on one specific thing. Not everything — one thing. Because scattered focus produces scattered results.</p>
+<p class="script-line">The last ten minutes: we build your commitment for the next two weeks. Specific. Measurable. Yours.</p>
+<p class="script-line">Between sessions, if you're on one of the higher tiers, you have access to my coaching app — where we track your wins, your blockers, and your patterns between calls.</p>
+<p class="script-line">No homework. No performance. Just honest conversation and real movement.</p>
+<p class="script-line">That's what a session looks like. Want to try one for free?"</p>
+<div class="label">Format Notes</div>
+<span class="format-tag">Walkthrough</span><span class="format-tag">55 seconds</span><span class="format-tag">Text overlay timeline</span><span class="format-tag">Include app screenshot</span>
+<div class="label">Caption</div>
+<p class="script-line">A lot of people think coaching is sitting across from someone who tells you what to do. It's the opposite. The best coaching sessions feel like the best conversations you've ever had — except at the end, you know exactly what to do next. First 50 discovery sessions are free. Link in bio.
+.
+.
+#CoachingSession #ExecutiveCoach #WhatIsCoaching #CoachingEgypt #LeadershipCoach #ProfessionalDevelopment #ExecCoach #LeadershipJourney #CairoLeaders #BusinessCoach</p>
+</div>
+
+<div class="reel"><div class="reel-num">Reel 07 &bull; Engagement</div><div class="reel-title">"The Clarity Test: 5 Questions Every Leader Should Answer"</div><div class="label">Hook</div><div class="reel-hook">"Most senior leaders can't answer these 5 questions about their own role. Can you?"</div><div class="label">Full Script</div><p class="script-line">[QUESTION CARDS - one at a time with voiceover]</p><p class="script-line">"Here are 5 questions every leader should be able to answer instantly.</p><p class="script-line">One: What is the single most important thing your team needs from you this month?</p><p class="script-line">Two: What decision have you been avoiding for more than two weeks?</p><p class="script-line">Three: Who on your team is at risk of leaving - and do they know you know?</p><p class="script-line">Four: What does success look like for you personally in 12 months?</p><p class="script-line">Five: What would you do differently if you weren't worried about what others thought?</p><p class="script-line">Save this. Come back monthly. If the answers change - you're growing. If they don't - let's talk."</p><div class="label">Format Notes</div><span class="format-tag">Question cards</span><span class="format-tag">45 seconds</span><span class="format-tag">High save rate</span><div class="label">Caption</div><p class="script-line">Save this and come back monthly. DM me "CLARITY" for a full self-assessment.
+.
+#LeadershipQuestions #ExecutiveCoach #ClarityMatters #CoachingEgypt #LeadershipMindset #SelfAwareness</p></div>
+
+<div class="reel"><div class="reel-num">Reel 08 &bull; App Feature</div><div class="reel-title">"I Built a Coaching App. Here's What It Does."</div><div class="label">Hook</div><div class="reel-hook">"Most coaching stops when the session ends. Mine doesn't."</div><div class="label">Full Script</div><p class="script-line">[SCREEN MOCKUP + voiceover]</p><p class="script-line">"I built a proprietary coaching app for my premium clients.</p><p class="script-line">Because real breakthroughs don't always happen in the session. They happen at 11pm before a difficult decision.</p><p class="script-line">The app lets you log what's on your mind between sessions. Track your wins. Flag your blockers. Capture the moments before they disappear.</p><p class="script-line">When we come back together, we have real data - not just memories.</p><p class="script-line">It's not journaling. It's structured progress tracking built for executives.</p><p class="script-line">Available in the ADHD Focus, Executive Growth, and Corporate Advisory tiers. Link in bio."</p><div class="label">Format Notes</div><span class="format-tag">App mockup screen</span><span class="format-tag">50 seconds</span><span class="format-tag">Premium feel</span><div class="label">Caption</div><p class="script-line">The coaching app keeps the work alive between sessions. Available in mid and top tiers. Details in bio.
+.
+#CoachingApp #ExecutiveCoach #ADHDCoach #CoachingEgypt #LeadershipTools</p></div>
+
+<div class="reel"><div class="reel-num">Reel 09 &bull; Quick Win Insight</div><div class="reel-title">"The Scheduling Mistake Most Leaders Make"</div><div class="label">Hook</div><div class="reel-hook">"You're not bad at managing time. You're bad at managing priorities. Here's the difference."</div><div class="label">Full Script</div><p class="script-line">[DIRECT TO CAMERA - sharp, confident]</p><p class="script-line">"The number one mistake leaders who feel chronically busy make?</p><p class="script-line">They schedule their time and try to fit priorities in around it. That's backwards.</p><p class="script-line">The most effective leaders identify their three most important priorities for the week - before anything else goes in the calendar. Then they protect that time like a meeting with the most important person they know.</p><p class="script-line">Stop scheduling your priorities. Start prioritising your schedule."</p><div class="label">Format Notes</div><span class="format-tag">Talking head</span><span class="format-tag">40 seconds</span><span class="format-tag">Quote card at end</span><div class="label">Caption</div><p class="script-line">One shift. This week. Tell me what happens.
+.
+#TimeManagement #LeadershipTips #ExecutiveCoach #CoachingEgypt #ProductivityTips</p></div>
+
+<div class="reel"><div class="reel-num">Reel 10 &bull; CTA / Pinned</div><div class="reel-title">"50 Free Discovery Sessions - Here's How to Get One"</div><div class="label">Hook</div><div class="reel-hook">"I'm giving away 50 free coaching sessions to leaders in Egypt. Here's who they're for."</div><div class="label">Full Script</div><p class="script-line">[DIRECT TO CAMERA - warm, honest, no pressure]</p><p class="script-line">"I want to be upfront. I'm offering 50 free discovery sessions and I want to tell you exactly what that means.</p><p class="script-line">It's a 60-minute conversation. One-on-one. With me directly. Not an assistant. Not a form.</p><p class="script-line">We'll talk about where you are, where you want to be, and whether working together makes sense.</p><p class="script-line">No hard sell. If it's not a fit - I'll tell you that too.</p><p class="script-line">These are for leaders, founders, and managers in Egypt and the region who know they're capable of more - but something keeps getting in the way.</p><p class="script-line">Link is in my bio. Book directly. First come first served. I look forward to meeting you."</p><div class="label">Format Notes</div><span class="format-tag">Talking head</span><span class="format-tag">55 seconds</span><span class="format-tag">PIN THIS REEL</span><span class="format-tag">Strong CTA</span><div class="label">Caption</div><p class="script-line">50 free discovery sessions. One hour. You and me. No pitch, no pressure. Just an honest conversation. First 50 leaders to book get this free. Link in bio.
+.
+#FreeCoaching #ExecutiveCoach #CoachingEgypt #DiscoverySession #CairoLeaders #LimitedOffer</p></div>
+
+</div><!-- end reels -->
+
+<!-- CAROUSELS -->
+<div id="carousels" class="section">
+<div class="card"><h2>🖼 Instagram Carousel Posts (5 Full Carousels)</h2><p style="color:#9eb4ea;font-size:13px;">Each carousel has 7-10 slides. Design in Canva using dark navy background (#08111f), gold accent (#c9a84c), white text. Square format (1080x1080px). First slide = cover/hook. Last slide = CTA.</p></div>
+
+<div class="card"><h2>Carousel 1: "5 Signs You Need an Executive Coach"</h2>
+<div class="slide"><div class="slide-num">SLIDE 1 - COVER</div><div class="slide-text">5 Signs You Need an Executive Coach<br>(Even If You Think You Don't)</div><div class="slide-note">Bold headline, gold accent line below. Your name + @handle bottom right.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 2</div><div class="slide-text">🔴 Sign #1<br><strong>You're working harder than ever but feeling less effective</strong><br>You're busy from 8am to midnight. But when you stop and ask "what actually moved forward this week?" - the answer is disappointing.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 3</div><div class="slide-text">🔴 Sign #2<br><strong>You avoid decisions longer than you should</strong><br>Not because you don't know what to do. Because you're not sure you trust yourself right now. And that pause is costing you.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 4</div><div class="slide-text">🔴 Sign #3<br><strong>Your team reflects your stress back at you</strong><br>When you're unclear, your team is unclear. When you're scattered, they're scattered. The fish rots from the head - and you know it.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 5</div><div class="slide-text">🔴 Sign #4<br><strong>You don't have a single person you can be fully honest with</strong><br>Not your team (they report to you). Not your family (they worry). Not your friends (they don't get it). You're leading alone.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 6</div><div class="slide-text">🔴 Sign #5<br><strong>You know what you should do. You just don't do it.</strong><br>You've read the books. You've attended the workshops. The gap isn't knowledge - it's execution. And execution needs accountability.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 7</div><div class="slide-text">✅ If you recognised yourself in 2 or more of these...<br>That's not weakness. That's awareness. And awareness is exactly where coaching begins.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 8 - CTA</div><div class="slide-text">💬 Free Discovery Session<br>First 50 leaders in Egypt<br>Link in bio &rarr; @andrewtadroscoaching</div><div class="slide-note">Gold background, dark text. Maximum contrast. Include website URL.</div></div>
+<div class="tip">Posting tip: Post Monday morning 8-9am Cairo time. Caption: "Save this for the leader in your life who needs to see it. Which one resonated most? Comment below."</div></div>
+
+<div class="card"><h2>Carousel 2: "The Difference Between a Manager and a Leader"</h2>
+<div class="slide"><div class="slide-num">SLIDE 1 - COVER</div><div class="slide-text">Manager vs Leader:<br>The Real Differences Nobody Talks About</div></div>
+<div class="slide"><div class="slide-num">SLIDES 2-7 (one contrast per slide)</div>
+<div class="slide-text"><strong>A manager asks: "Did you do it?"</strong><br>A leader asks: "What got in your way?"</div><br>
+<div class="slide-text"><strong>A manager protects their position.</strong><br>A leader builds other leaders.</div><br>
+<div class="slide-text"><strong>A manager gives answers.</strong><br>A leader asks better questions.</div><br>
+<div class="slide-text"><strong>A manager reacts to problems.</strong><br>A leader creates the conditions where fewer problems occur.</div><br>
+<div class="slide-text"><strong>A manager measures output.</strong><br>A leader measures growth.</div><br>
+<div class="slide-text"><strong>A manager is defined by their title.</strong><br>A leader is defined by their impact - long after the title is gone.</div>
+</div>
+<div class="slide"><div class="slide-num">SLIDE 8 - REFLECTION</div><div class="slide-text">Which are you right now?<br>And which do you want to become?<br>That's the conversation I have with every new client.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 9 - CTA</div><div class="slide-text">Book your free discovery session. Link in bio.</div></div>
+<div class="tip">Posting tip: Caption: "Save this. Share it with someone you lead. Which contrast hit hardest for you?"</div></div>
+
+<div class="card"><h2>Carousel 3: "ADHD Leadership - The Untold Story in Egypt"</h2>
+<div class="slide"><div class="slide-num">SLIDE 1 - COVER</div><div class="slide-text">ADHD Leadership in Egypt:<br>What Nobody Is Talking About</div></div>
+<div class="slide"><div class="slide-num">SLIDE 2</div><div class="slide-text">An estimated 1 in 20 adults has ADHD.<br>In Egypt's professional world, almost none of them talk about it.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 3</div><div class="slide-text">They've built the habit of masking it.<br>Overworking to compensate.<br>Apologising for traits that are actually strengths.</div></div>
+<div class="slide"><div class="slide-num">SLIDES 4-6</div>
+<div class="slide-text"><strong>The ADHD strengths nobody mentions:</strong><br>Hyperfocus under pressure<br>Pattern recognition across complex systems<br>Creative problem-solving that breaks conventional thinking<br>Genuine empathy for people who are struggling<br>Relentless drive when intrinsically motivated</div>
+</div>
+<div class="slide"><div class="slide-num">SLIDE 7</div><div class="slide-text">The challenge isn't the ADHD.<br>It's the lack of systems designed for this kind of brain.<br>That's what we build together.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 8 - CTA</div><div class="slide-text">If this is you - or someone you know - let's talk.<br>Free discovery session. Link in bio.</div></div>
+<div class="tip">Posting tip: This carousel targets a very specific audience who will share it privately. Caption: "If this resonates - DM me the word FOCUS. We'll talk."</div></div>
+
+<div class="card"><h2>Carousel 4: "Your First 90 Days as a New Leader"</h2>
+<div class="slide"><div class="slide-num">SLIDE 1 - COVER</div><div class="slide-text">Just Got Promoted?<br>Here's Your 90-Day Playbook.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 2 - Days 1-30</div><div class="slide-text">🟡 Days 1-30: Listen before you lead.<br>Your job is not to change things yet. It's to understand them. Meet everyone. Ask more questions than you answer. Build trust before you build change.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 3 - Days 31-60</div><div class="slide-text">🟠 Days 31-60: Identify your quick wins.<br>Find 2-3 things you can improve visibly and quickly. These aren't about glory - they're about showing your team that things can move under your leadership.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 4 - Days 61-90</div><div class="slide-text">🟢 Days 61-90: Set the direction.<br>Now you have enough context to lead. Communicate your vision clearly. Set team norms. Make your first hard decision with clarity and care.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 5</div><div class="slide-text">The biggest mistake new leaders make?<br>Trying to prove themselves in week one.<br>Leadership is earned over time - not announced.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 6 - CTA</div><div class="slide-text">Just stepped into a leadership role?<br>This is exactly what we work on in the first sessions together.<br>Free discovery. Link in bio.</div></div>
+<div class="tip">Posting tip: Great for LinkedIn AND Instagram. Caption: "Save this for the next time you or someone you know takes on a new leadership role."</div></div>
+
+<div class="card"><h2>Carousel 5: "What Executive Coaching Actually Costs (and What It's Worth)"</h2>
+<div class="slide"><div class="slide-num">SLIDE 1 - COVER</div><div class="slide-text">The Real Cost of Executive Coaching<br>(And What It Costs You NOT to Have It)</div></div>
+<div class="slide"><div class="slide-num">SLIDE 2</div><div class="slide-text">Let's be honest. Executive coaching is an investment.<br>Sessions range from $75 to $1,500/month depending on depth and tier.<br>For some leaders, that feels significant.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 3</div><div class="slide-text">But consider the cost of NOT having it:<br>One bad hire due to poor decision-making: $20,000+<br>One missed pivot because you were too in the weeds: Immeasurable<br>One year of burnout that tanks your team's performance: Priceless (in the worst way)</div></div>
+<div class="slide"><div class="slide-num">SLIDE 4</div><div class="slide-text">Coaching isn't an expense.<br>It's insurance against the cost of unclear thinking at the top.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 5</div><div class="slide-text">The leaders I work with don't invest in coaching because things are going badly.<br>They invest because things are going well - and they refuse to leave the next level to chance.</div></div>
+<div class="slide"><div class="slide-num">SLIDE 6 - CTA</div><div class="slide-text">Start with a free discovery session.<br>No commitment. No risk. Just a conversation.<br>Link in bio.</div></div>
+<div class="tip">Posting tip: Caption: "What has unclear leadership cost YOUR business? Be honest in the comments."</div></div>
+</div><!-- end carousels -->
+
+<!-- LINKEDIN -->
+<div id="linkedin" class="section">
+<div class="card"><h2>💼 LinkedIn Posts (8 Full Posts)</h2><p style="color:#9eb4ea;font-size:13px;">LinkedIn rewards authenticity and depth. These posts are written in first-person, conversational but professional tone. Aim for 3-5 posts per week. Mix text-only and carousel formats. Best posting times in Egypt: Tuesday-Thursday, 8-10am and 12-2pm Cairo time.</p></div>
+
+<div class="linkedin-post"><div class="lp-type">Post 1 &bull; Story &bull; Text Only &bull; Launch Post</div><div class="lp-body">I've spent 15+ years working in leadership, product, and strategy.
+
+I've built teams. I've made hard calls. I've had seasons where I was firing on all cylinders - and seasons where I was running on empty and pretending otherwise.
+
+A few years ago, I started working with an executive coach. And something shifted.
+
+Not because they gave me answers I didn't have.
+
+But because they created the space for me to think clearly - without the noise of expectation, hierarchy, or performance.
+
+That experience changed how I led. And eventually, it changed my path.
+
+Today I coach leaders across Egypt and the region - executives, founders, and managers who are capable of far more than their current circumstances reflect.
+
+We work on clarity, structure, decision-making, and the kind of self-awareness that actually changes how you show up.
+
+If you're building something in Egypt and feel like you should be further along - I'd love to talk.
+
+I'm offering 50 free discovery sessions to start. No pitch. Just a conversation.
+
+DM me or find the link in my profile.
+
+#ExecutiveCoaching #Leadership #Egypt #CareerDevelopment #Coaching</div></div>
+
+<div class="linkedin-post"><div class="lp-type">Post 2 &bull; Insight &bull; Text Only &bull; High Engagement</div><div class="lp-body">The hardest thing I ask new clients to do:
+
+Stop solving everyone else's problems for two weeks.
+
+Just stop.
+
+Don't fix. Don't rescue. Don't jump in.
+
+Let the silence sit. Let the team struggle a little. Let the discomfort exist.
+
+Most of them tell me it's the hardest professional thing they've ever done.
+
+And within two weeks - nearly every single one of them comes back with the same realisation:
+
+"I've been the bottleneck."
+
+Not because they were incapable.
+
+But because they'd made themselves so necessary that nobody around them could grow.
+
+The best leaders I know are the ones who've learned to lead from a distance.
+
+To trust. To delegate. To resist the urge to prove themselves through doing.
+
+Are you the most capable person in every room you walk into?
+
+Or are you building rooms that don't need you in them?
+
+That distinction is everything.
+
+#Leadership #ExecutiveCoaching #ManagementTips #EgyptLeaders #ProfessionalDevelopment</div></div>
+
+<div class="linkedin-post"><div class="lp-type">Post 3 &bull; ADHD Awareness &bull; Text Only &bull; Shareable</div><div class="lp-body">Something I don't see discussed enough in Egypt's professional community:
+
+ADHD in leadership.
+
+I work with executives and founders who have ADHD - diagnosed and undiagnosed. And what I observe is consistent:
+
+They are some of the most creative, driven, and empathetic leaders I have ever met.
+
+They are also some of the most exhausted.
+
+Because they've spent their entire careers compensating. Masking. Working twice as hard to appear "normal." Apologising for the very traits that make them exceptional.
+
+The hyperfocus that others call "obsessive" - I call it the ability to go deeper than anyone else in the room.
+
+The restlessness that gets labelled "unable to commit" - I call it an immune system against mediocrity.
+
+The sensitivity to injustice - I call it the foundation of genuinely inclusive leadership.
+
+If you lead with ADHD - or suspect you might - this is not a liability. It is a different kind of leadership intelligence.
+
+And with the right structure and support, it becomes one of your greatest professional assets.
+
+I'd be glad to be part of that conversation.
+
+#ADHDLeadership #ExecutiveCoaching #Neurodiversity #LeadershipDevelopment #Egypt</div></div>
+
+<div class="linkedin-post"><div class="lp-type">Post 4 &bull; Value &bull; List Format &bull; High Save Rate</div><div class="lp-body">7 things I've learned from coaching leaders across Egypt:
+
+1. The higher the title, the lonelier the role. Most senior leaders have no one they can be fully honest with.
+
+2. Busyness is often a defence mechanism. It feels productive. It avoids the harder, deeper work.
+
+3. Most leadership problems are communication problems in disguise.
+
+4. Egyptian leaders carry a specific kind of weight - family expectations, cultural hierarchy, and economic pressure - that Western coaching frameworks don't address. This matters.
+
+5. ADHD is more prevalent in leadership than anyone admits - and more of a strength than most people realise.
+
+6. The decision you keep avoiding is almost always the most important one.
+
+7. Clarity is a skill. It can be learned. It can be practiced. And it changes everything.
+
+Which of these resonates most with you right now?
+
+#Leadership #ExecutiveCoaching #LeadershipInsights #Egypt #ProfessionalGrowth</div></div>
+
+<div class="linkedin-post"><div class="lp-type">Post 5 &bull; Poll &bull; Engagement Driver</div><div class="lp-body">Honest question for leaders in Egypt:
+
+What is your biggest leadership challenge right now?
+
+[POLL OPTIONS]
+▢ Clarity - I know what I want but not how to get there
+▢ Team - My team isn't performing the way I need them to
+▢ Decisions - I avoid or delay important calls
+▢ Balance - I'm building the business but losing myself
+
+Vote below. And if you want to tell me more - DM me. I read every message.
+
+I'm asking because I want the work I create here to be useful to the people who actually need it.
+
+#Leadership #Egypt #ExecutiveCoaching #Poll #LeadershipDevelopment</div></div>
+
+<div class="linkedin-post"><div class="lp-type">Post 6 &bull; Behind the Scenes &bull; Trust Builder</div><div class="lp-body">What I actually do in a coaching session:
+
+I don't give advice.
+
+I don't tell you what worked for me.
+
+I don't hand you a framework from a business school case study.
+
+Here's what I do:
+
+I listen. Properly. Without forming a response while you talk.
+
+I notice what you say - and what you consistently don't say.
+
+I ask you the question you've been avoiding.
+
+I hold you accountable to the version of yourself you said you wanted to become.
+
+And I do it without judgement. Without hierarchy. Without agenda.
+
+The most common thing clients tell me after our first session:
+
+"I've never had a conversation like that before."
+
+That's not a compliment I take lightly.
+
+If you're curious what that feels like - I have 50 free discovery sessions available for leaders in Egypt and the region.
+
+Link in profile. Let's talk.
+
+#ExecutiveCoaching #Leadership #CoachingEgypt #ProfessionalDevelopment #LeadershipCoach</div></div>
+
+<div class="linkedin-post"><div class="lp-type">Post 7 &bull; Local Context &bull; Thought Leadership</div><div class="lp-body">A note on leadership in Egypt:
+
+Every framework I was trained on came from the West.
+
+Harvard Business Review. McKinsey Quarterly. Silicon Valley playbooks.
+
+And most of them are useful. Some of them are brilliant.
+
+But none of them were written for a founder navigating a family business in Cairo.
+
+None of them account for the weight of leading a team through economic volatility while managing multigenerational expectations at home.
+
+None of them address what it means to be a woman in a senior leadership role in Egypt - and the specific courage that requires.
+
+None of them understand how hierarchy functions in Egyptian corporate culture - and how to lead within it without losing yourself.
+
+I coach here because the context matters.
+
+And because Egyptian and regional leaders deserve support that actually fits.
+
+If that resonates - let's connect.
+
+#EgyptLeaders #Leadership #ExecutiveCoaching #CairoLeaders #MiddleEastBusiness #LocalContext</div></div>
+
+<div class="linkedin-post"><div class="lp-type">Post 8 &bull; CTA &bull; Launch Offer</div><div class="lp-body">I'm doing something I haven't done before.
+
+I'm offering 50 completely free, one-hour executive coaching discovery sessions - to leaders, founders, and managers across Egypt and the wider region.
+
+No catch. No pitch at the end. No obligation.
+
+Just a proper, focused conversation about where you are, where you want to be, and whether there's a way I can help you get there.
+
+Why am I doing this?
+
+Because executive coaching in Egypt is underutilised. Not because leaders don't need it. But because most people haven't experienced it, and don't know what to expect.
+
+I want to change that.
+
+If you:
+- Lead a team, a function, or a business
+- Feel like you should be further along than you are
+- Have a decision, challenge, or transition you're navigating
+- Or simply want to think clearly with someone who won't judge you
+
+Book a session. Link in profile. First 50 sessions are on me.
+
+Tag a leader who needs this.
+
+#ExecutiveCoaching #FreeCoaching #EgyptLeaders #Leadership #CoachingEgypt #CairoLeaders</div></div>
+
+</div><!-- end linkedin -->
+
+<!-- FACEBOOK ADS -->
+<div id="fbads" class="section">
+<div class="card"><h2>📣 Facebook Ad Campaigns (4 Ads)</h2><p style="color:#9eb4ea;font-size:13px;">Run these as Meta (Facebook + Instagram) ads. Target: Egypt, Cairo/Giza, age 28-55, interests: Business, Entrepreneurship, Leadership, Management, Professional Development, ADHD. Budget: start at $5-10/day per ad. Use A/B testing on headlines.</p></div>
+
+<div class="fb-ad"><div class="ad-label">Ad 1 &bull; Awareness &bull; Cold Audience &bull; Video or Image</div>
+<h3 style="color:#edf2ff;margin-bottom:8px;">Headline:</h3><p style="color:#edf2ff;margin-bottom:12px;">Egypt's First Executive Coach Built for Leaders Who Think Differently</p>
+<h3 style="color:#edf2ff;margin-bottom:8px;">Primary Text:</h3><p style="color:#edf2ff;">You've built your career on ambition, drive, and resilience.
+
+But somewhere along the way, the clarity that used to come naturally started to feel harder to access.
+
+Andrew Tadros is an executive coach working with leaders, founders, and managers across Egypt and the region.
+
+His approach is direct, practical, and built specifically for the pressures of leading in this part of the world.
+
+No generic frameworks. No one-size-fits-all advice.
+
+Just focused, honest coaching that moves you forward.
+
+First 50 discovery sessions are completely free.
+
+Click below to learn more and book yours.</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">CTA Button:</h3><p style="color:#c9a84c;">Book Free Session</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">Target Audience:</h3><p style="color:#9eb4ea;">Egypt &bull; Age 30-55 &bull; Job titles: Manager, Director, CEO, Founder, VP &bull; Interests: Business, Leadership, Entrepreneurship</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">Visual:</h3><p style="color:#9eb4ea;">Professional headshot of Andrew OR clean branded image with headline text. Dark navy background, gold accent. No stock photos.</p></div>
+
+<div class="fb-ad"><div class="ad-label">Ad 2 &bull; Lead Generation &bull; Warm Audience Retarget</div>
+<h3 style="color:#edf2ff;margin-bottom:8px;">Headline:</h3><p style="color:#edf2ff;margin-bottom:12px;">Still Thinking About It? Your Free Session Is Waiting.</p>
+<h3 style="color:#edf2ff;margin-bottom:8px;">Primary Text:</h3><p style="color:#edf2ff;">You visited. You read.
+
+And maybe you thought: "I'll come back to this."
+
+Here's your reminder.
+
+The free discovery session is still available. 60 minutes. One-on-one with Andrew. No commitment required.
+
+If you're a leader in Egypt navigating a challenge, a decision, or a transition - this is the conversation you've been putting off.
+
+Don't wait until the 50 spots are gone.
+
+Book now. Link below.</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">CTA Button:</h3><p style="color:#c9a84c;">Claim My Free Session</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">Target Audience:</h3><p style="color:#9eb4ea;">Retarget: Website visitors last 30 days + Instagram/Facebook profile visitors + Video viewers (50%+ watched)</p></div>
+
+<div class="fb-ad"><div class="ad-label">Ad 3 &bull; ADHD Niche &bull; Specific Targeting</div>
+<h3 style="color:#edf2ff;margin-bottom:8px;">Headline:</h3><p style="color:#edf2ff;margin-bottom:12px;">Leading with ADHD? You're Not Broken. You're Different. Let's Build on That.</p>
+<h3 style="color:#edf2ff;margin-bottom:8px;">Primary Text:</h3><p style="color:#edf2ff;">Most coaching isn't designed for ADHD minds.
+
+It's built on systems, routines, and structures that work for neurotypical brains - and feel like a straightjacket for everyone else.
+
+Andrew Tadros specialises in executive coaching for leaders with ADHD.
+
+His approach works with your brain's natural rhythms - not against them.
+
+Building structure that actually sticks.
+Turning hyperfocus into strategic advantage.
+Replacing shame with genuine self-awareness.
+
+If you lead with ADHD - diagnosed or not - this is built for you.
+
+Free 60-minute discovery session. First 50 leaders.
+
+Book yours below.</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">CTA Button:</h3><p style="color:#c9a84c;">Book Free ADHD Coaching Session</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">Target Audience:</h3><p style="color:#9eb4ea;">Egypt &bull; Age 25-50 &bull; Interests: ADHD, Neurodiversity, Mental Health, Personal Development, Productivity &bull; Behaviours: Small business owners</p></div>
+
+<div class="fb-ad"><div class="ad-label">Ad 4 &bull; Corporate / B2B &bull; Company Decision Makers</div>
+<h3 style="color:#edf2ff;margin-bottom:8px;">Headline:</h3><p style="color:#edf2ff;margin-bottom:12px;">Invest in Your Leadership Team. The ROI Is Undeniable.</p>
+<h3 style="color:#edf2ff;margin-bottom:8px;">Primary Text:</h3><p style="color:#edf2ff;">Your company's biggest competitive advantage isn't your product.
+
+It's the quality of thinking at the top.
+
+Andrew Tadros works with companies across Egypt and the region to coach leadership teams - driving clarity, alignment, and measurable performance improvement.
+
+Corporate Advisory packages start at $1,500/month and include:
+- Monthly leadership sessions
+- Team coaching and alignment work
+- Access to proprietary coaching app
+- Ongoing support between sessions
+
+Reach out to discuss a bespoke package for your organisation.
+
+Link below to book a consultation.</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">CTA Button:</h3><p style="color:#c9a84c;">Book Corporate Consultation</p>
+<h3 style="color:#edf2ff;margin:12px 0 8px;">Target Audience:</h3><p style="color:#9eb4ea;">Egypt &bull; Age 35-60 &bull; Job titles: CEO, MD, HR Director, L&D Manager, COO &bull; Company size: 50-500 employees &bull; Interests: Corporate Training, Leadership Development</p></div>
+</div><!-- end fbads -->
+
+<!-- 30-DAY CALENDAR -->
+<div id="calendar" class="section">
+<div class="card"><h2>📅 30-Day Content Calendar</h2><p style="color:#9eb4ea;font-size:13px;">Post 5-6 times per week across Instagram + LinkedIn. Facebook mirrors Instagram with slight copy adjustments. TikTok: repost best-performing Reels. WhatsApp: weekly broadcast to contacts. Best times: Sun-Thu 8-10am and 6-8pm Cairo time (EET).</p></div>
+
+<div class="wk-header">📆 WEEK 1 &mdash; Launch Week: Introduce Yourself</div>
+<table class="cal-table"><tr><th>Day</th><th>Platform</th><th>Format</th><th>Content</th><th>Caption Hook</th></tr>
+<tr><td>Sun 1</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>Reel 01: Who I Am</td><td>"Most leaders in Egypt are running on empty..."</td></tr>
+<tr><td>Sun 1</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>LinkedIn Post 1: My Story</td><td>"I've spent 15+ years in leadership..."</td></tr>
+<tr><td>Mon 2</td><td><span class="badge ig">IG</span></td><td>Story</td><td>Poll: What's your biggest leadership challenge?</td><td>Interactive story with 4 options</td></tr>
+<tr><td>Tue 3</td><td><span class="badge ig">IG</span></td><td>Carousel</td><td>Carousel 1: 5 Signs You Need a Coach</td><td>"Save this for the leader in your life..."</td></tr>
+<tr><td>Tue 3</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>LinkedIn Post 5: Poll</td><td>"Honest question for leaders in Egypt..."</td></tr>
+<tr><td>Wed 4</td><td><span class="badge ig">IG</span></td><td>Story</td><td>Behind the scenes: your workspace + coaching setup</td><td>"This is where the work happens..."</td></tr>
+<tr><td>Thu 5</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>Reel 04: What Coaching Is NOT</td><td>"Stop confusing these 4 things with coaching"</td></tr>
+<tr><td>Thu 5</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>LinkedIn Post 6: What I Actually Do</td><td>"What I actually do in a coaching session..."</td></tr>
+<tr><td>Fri 6</td><td><span class="badge ig">IG</span></td><td>Quote Card</td><td>"Clarity is not a personality trait. It's a skill."</td><td>Gold background, simple design</td></tr>
+<tr><td>Sat 7</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>Reel 10: 50 Free Sessions CTA (PIN THIS)</td><td>"50 free coaching sessions. Here's who they're for."</td></tr>
+</table>
+
+<div class="wk-header">📆 WEEK 2 &mdash; Value Week: Teach Something Real</div>
+<table class="cal-table"><tr><th>Day</th><th>Platform</th><th>Format</th><th>Content</th><th>Caption Hook</th></tr>
+<tr><td>Sun 8</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>Reel 03: The 3-Question Reset</td><td>"Feeling overwhelmed? Ask these 3 questions first."</td></tr>
+<tr><td>Sun 8</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>LinkedIn Post 4: 7 Things I've Learned</td><td>"7 things I've learned from coaching leaders in Egypt"</td></tr>
+<tr><td>Mon 9</td><td><span class="badge ig">IG</span></td><td>Story</td><td>DM prompt: "What's your leadership challenge this week?"</td><td>Open question sticker</td></tr>
+<tr><td>Tue 10</td><td><span class="badge ig">IG</span></td><td>Carousel</td><td>Carousel 2: Manager vs Leader</td><td>"Which contrast hit hardest for you?"</td></tr>
+<tr><td>Tue 10</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>LinkedIn Post 2: Stop Solving Others' Problems</td><td>"The hardest thing I ask new clients to do..."</td></tr>
+<tr><td>Wed 11</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>Reel 09: Scheduling Mistake</td><td>"You're not bad at managing time. You're bad at priorities."</td></tr>
+<tr><td>Thu 12</td><td><span class="badge ig">IG</span></td><td>Story</td><td>Countdown: "X spots left from 50 free sessions"</td><td>Urgency + link sticker</td></tr>
+<tr><td>Thu 12</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>LinkedIn Post 7: Leadership in Egypt</td><td>"Every framework I was trained on came from the West..."</td></tr>
+<tr><td>Fri 13</td><td><span class="badge ig">IG</span></td><td>Quote Card</td><td>"The decision you keep avoiding is almost always the most important one."</td><td>Simple white text on dark</td></tr>
+<tr><td>Sat 14</td><td><span class="badge ig">IG</span><span class="badge tt">TT</span></td><td>Reel</td><td>Reel 07: The Clarity Test (repost to TikTok)</td><td>"Can you answer these 5 questions right now?"</td></tr>
+</table>
+
+<div class="wk-header">📆 WEEK 3 &mdash; ADHD Focus Week: Own Your Niche</div>
+<table class="cal-table"><tr><th>Day</th><th>Platform</th><th>Format</th><th>Content</th><th>Caption Hook</th></tr>
+<tr><td>Sun 15</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>Reel 02: ADHD in the Boardroom</td><td>"They told you ADHD was your weakness. They were wrong."</td></tr>
+<tr><td>Sun 15</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>LinkedIn Post 3: ADHD in Leadership</td><td>"Something I don't see discussed enough in Egypt's professional community..."</td></tr>
+<tr><td>Mon 16</td><td><span class="badge ig">IG</span></td><td>Story</td><td>"Do you or someone you know lead with ADHD?" - Poll</td><td>Yes / Think so / Not sure</td></tr>
+<tr><td>Tue 17</td><td><span class="badge ig">IG</span></td><td>Carousel</td><td>Carousel 3: ADHD Leadership in Egypt</td><td>"If this resonates - DM me FOCUS"</td></tr>
+<tr><td>Wed 18</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>Reel 08: The Coaching App</td><td>"Most coaching stops when the session ends. Mine doesn't."</td></tr>
+<tr><td>Wed 18</td><td><span class="badge li">LI</span></td><td>Article</td><td>"ADHD Leadership in Egypt: The Competitive Advantage Nobody Talks About"</td><td>Full LinkedIn article (500+ words)</td></tr>
+<tr><td>Thu 19</td><td><span class="badge ig">IG</span></td><td>Story</td><td>Share a DM (anonymised) from someone the ADHD content resonated with</td><td>Social proof + connection</td></tr>
+<tr><td>Fri 20</td><td><span class="badge ig">IG</span></td><td>Quote Card</td><td>"ADHD is not a disorder of attention. It's a disorder of regulating attention. And regulation is learnable."</td><td>Powerful and shareable</td></tr>
+<tr><td>Sat 21</td><td><span class="badge ig">IG</span><span class="badge tt">TT</span></td><td>Reel</td><td>Reel 05: The Cairo Leader (repost to TikTok)</td><td>"What works in a Harvard case study doesn't work in Cairo."</td></tr>
+</table>
+
+<div class="wk-header">📆 WEEK 4 &mdash; Proof & CTA Week: Convert Attention to Action</div>
+<table class="cal-table"><tr><th>Day</th><th>Platform</th><th>Format</th><th>Content</th><th>Caption Hook</th></tr>
+<tr><td>Sun 22</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>Reel 06: Inside a Coaching Session</td><td>"What actually happens when we work together?"</td></tr>
+<tr><td>Sun 22</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>LinkedIn Post 8: 50 Free Sessions Offer</td><td>"I'm doing something I haven't done before..."</td></tr>
+<tr><td>Mon 23</td><td><span class="badge ig">IG</span></td><td>Story</td><td>Testimonial or early feedback from discovery session (anonymised)</td><td>"Someone messaged me after their free session..."</td></tr>
+<tr><td>Tue 24</td><td><span class="badge ig">IG</span></td><td>Carousel</td><td>Carousel 4: 90-Day New Leader Playbook</td><td>"Save this for your next promotion."</td></tr>
+<tr><td>Tue 24</td><td><span class="badge li">LI</span></td><td>Carousel</td><td>Repurpose Carousel 1 as LinkedIn carousel post</td><td>"Which of these 5 signs hit closest to home?"</td></tr>
+<tr><td>Wed 25</td><td><span class="badge ig">IG</span></td><td>Reel</td><td>New Reel: "What happened after 4 weeks of coaching" (narrative format)</td><td>"A client came to me paralysed by a decision..."</td></tr>
+<tr><td>Thu 26</td><td><span class="badge ig">IG</span></td><td>Story</td><td>Urgency: "Only X free spots remaining" + booking link</td><td>Last push for free sessions</td></tr>
+<tr><td>Thu 26</td><td><span class="badge fb">FB</span></td><td>Ad Live</td><td>Launch Facebook Ad 1 (cold audience awareness)</td><td>Target: Cairo professionals 30-55</td></tr>
+<tr><td>Fri 27</td><td><span class="badge ig">IG</span></td><td>Quote Card</td><td>"The best leaders I know are not the most talented. They are the most self-aware."</td><td>Shareable + saveable</td></tr>
+<tr><td>Sat 28</td><td><span class="badge ig">IG</span></td><td>Carousel</td><td>Carousel 5: Cost of Coaching vs Cost of Not Coaching</td><td>"What has unclear leadership cost YOUR business?"</td></tr>
+<tr><td>Sun 29</td><td><span class="badge li">LI</span></td><td>Text Post</td><td>Month 1 Reflection: "Here's what I've learned from our first month together"</td><td>Gratitude + forward-looking</td></tr>
+<tr><td>Mon 30</td><td><span class="badge ig">IG</span><span class="badge li">LI</span><span class="badge fb">FB</span></td><td>All platforms</td><td>Month 2 Launch Announcement: New content themes, upcoming series</td><td>Build anticipation for what's next</td></tr>
+</table>
+
+<div class="card" style="margin-top:24px;"><h2>Hashtag Master List</h2><h3>Egypt / Regional</h3><p style="color:#edf2ff;margin-top:8px;">#EgyptLeaders #CairoLeaders #EgyptBusiness #LeadershipEgypt #CairoBusiness #EgyptEntrepreneurs #MiddleEastLeaders #RegionalLeadership #CoachingEgypt #EgyptProfessionals</p><h3>Executive Coaching</h3><p style="color:#edf2ff;margin-top:8px;">#ExecutiveCoaching #ExecutiveCoach #LeadershipCoach #BusinessCoach #ExecCoach #CoachingLife #ProfessionalCoach #CareerCoach #LifeCoach #MindsetCoach</p><h3>Leadership</h3><p style="color:#edf2ff;margin-top:8px;">#Leadership #LeadershipDevelopment #LeadershipSkills #LeadershipTips #LeadershipMindset #LeadershipJourney #ProfessionalDevelopment #PersonalGrowth #GrowthMindset #BusinessLeadership</p><h3>ADHD</h3><p style="color:#edf2ff;margin-top:8px;">#ADHDLeadership #ADHDCoach #ADHDAwareness #ExecutiveADHD #NeurodivergentLeaders #ADHDAdults #ADHDEntrepreneur #ADHDBusiness #NeurodiversityAtWork #ADHDMindset</p></div>
+</div><!-- end calendar -->
+
+<!-- PROFILE SETUP -->
+<div id="setup" class="section">
+<div class="card"><h2>⚙️ Profile Setup Guide</h2><p style="color:#9eb4ea;font-size:13px;">Set these up once and get them right. First impressions matter. Consistency across all platforms builds trust and recognition.</p></div>
+
+<div class="card"><h2>📸 Instagram Profile Setup</h2>
+<h3>Username</h3><p style="color:#edf2ff;margin-top:6px;">@andrewtadroscoaches &mdash; or &mdash; @andrewtadros.coach</p>
+<h3>Display Name</h3><p style="color:#edf2ff;margin-top:6px;">Andrew Tadros | Executive Coach</p>
+<h3>Bio (150 characters max)</h3>
+<div class="bio-box">Executive Coach 🇪🇬
+Leaders, founders &amp; managers
+Think clearly. Lead boldly. Grow.
+ADHD-aware coaching | Cairo &amp; online
+👇 Free session — first 50 (link below)</div>
+<h3>Link in Bio</h3><p style="color:#edf2ff;margin-top:6px;">Use Linktree or direct link to your coaching site. Include: Book Free Session / Programs / Coaching Deck</p>
+<h3>Profile Photo</h3><p style="color:#9eb4ea;margin-top:6px;">Professional headshot. Clean background (white or navy). Confident expression. Well lit. Avoid glasses glare or harsh shadows.</p>
+<h3>Story Highlights to Create</h3><p style="color:#edf2ff;margin-top:6px;">🎯 About Me &bull; 💼 Programs &bull; 🧠 ADHD Coaching &bull; 📊 Results &bull; 💬 Free Session</p>
+<div class="tip">Pro tip: Post your Reel 10 (50 Free Sessions CTA) first and PIN it. This becomes the first thing visitors see on your grid.</div></div>
+
+<div class="card"><h2>💼 LinkedIn Profile Setup</h2>
+<h3>Headline (220 chars max)</h3><p style="color:#edf2ff;margin-top:6px;">Executive Coach | Helping Leaders in Egypt Think Clearly, Lead Boldly & Grow | ADHD-Aware Coaching | Clarity • Strategy • Performance</p>
+<h3>About Section</h3>
+<div class="bio-box" style="font-family:inherit;">I work with leaders, founders, and managers across Egypt and the region who are smart, driven, and ready for the next level.
+
+My coaching is practical, direct, and built for the specific pressures of leading in this part of the world - where family expectations, cultural hierarchy, and economic volatility are all part of the equation.
+
+I have a particular focus on ADHD-aware executive coaching - working with leaders who think differently and helping them turn that into a competitive advantage rather than a source of shame.
+
+What we work on:
+&bull; Clarity of direction and decision-making
+&bull; Building systems that work with your brain
+&bull; Leadership presence and communication
+&bull; Accountability and measurable progress
+&bull; Navigating transitions, promotions, and high-stakes moments
+
+I'm currently offering 50 free discovery sessions to leaders across Egypt. One hour. Honest conversation. No obligation.
+
+If that interests you - reach out directly or visit the link below.</div>
+<h3>Featured Section</h3><p style="color:#9eb4ea;margin-top:6px;">Feature your coaching site link + best-performing LinkedIn post + free session booking link</p>
+<h3>Experience</h3><p style="color:#9eb4ea;margin-top:6px;">List Andrew Tadros Coaching as current role. Add all previous leadership, product, strategy, and media experience with clear descriptions of impact.</p>
+<div class="tip">Pro tip: Ask your first 5-10 clients for LinkedIn recommendations. Even 2-3 strong ones dramatically increase profile credibility.</div></div>
+
+<div class="card"><h2>🎥 Content Creation Setup</h2>
+<h3>What You Need to Film Reels</h3>
+<p style="color:#edf2ff;margin-top:8px;">✅ Smartphone with good camera (iPhone 13+ or equivalent)<br>✅ Ring light or window light (natural light is free and great)<br>✅ Simple background (clean wall, bookshelf, or plain backdrop)<br>✅ Tripod or phone stand<br>✅ CapCut (free app) for subtitles and editing<br>✅ Canva (free) for carousels, quote cards, and story graphics</p>
+<h3>Canva Brand Settings</h3>
+<p style="color:#edf2ff;margin-top:8px;">Primary Color: #c9a84c (Gold)<br>Secondary Color: #08111f (Dark Navy)<br>Text Color: #edf2ff (Off White)<br>Accent Color: #5b84ff (Blue)<br>Font: Inter or Montserrat (Bold for headlines, Regular for body)</p>
+<h3>Filming Tips</h3>
+<p style="color:#edf2ff;margin-top:8px;">✅ Film in landscape first, crop to vertical for Reels<br>✅ Always use subtitles - 85% of Reels watched without sound<br>✅ Face the light source, never have it behind you<br>✅ Speak 20% slower than feels natural on camera<br>✅ Film 2-3 takes per reel, use the most natural-sounding one</p>
+<div class="tip">Pro tip: Batch film 4-5 reels in one sitting. Same outfit, same location. It's efficient and you'll be warmed up by reel 3.</div></div>
+
+<div class="card"><h2>📱 WhatsApp Strategy</h2>
+<p style="color:#9eb4ea;font-size:13px;">WhatsApp is Egypt's most personal digital channel. Use it for warm outreach and community building, not broadcasting.</p>
+<h3>Week 1: Warm Launch</h3><p style="color:#edf2ff;margin-top:6px;">Send a personalised message to your top 50 professional contacts. Not a broadcast - personal messages. Tell them you've launched, share your site, offer them a free session or ask them to think of someone who'd benefit.</p>
+<h3>Weekly Broadcast (existing contacts who opt in)</h3><p style="color:#edf2ff;margin-top:6px;">Sunday evening: 1 leadership tip or reflection. 3-4 sentences. No hard sell. Occasional reminder of free sessions remaining. Keep the broadcast list under 200 people - quality over volume.</p>
+<h3>Sample Broadcast Message</h3>
+<div class="bio-box" style="font-family:inherit;">Good Sunday evening 👋
+
+This week's thought:
+
+The decision you keep postponing is rarely as complex as you're making it. Most of the time, you already know what to do. You're just looking for permission to do it.
+
+Give yourself that permission this week.
+
+If you want to talk through something with me - free session link is still open (link). First 50 leaders only.
+
+Have a strong week. — Andrew</div></div>
+</div><!-- end setup -->
+
+<script>
+function showSection(id,btn){
+document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.querySelectorAll('.nav-tabs button').forEach(b=>b.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+btn.classList.add('active');
+window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
