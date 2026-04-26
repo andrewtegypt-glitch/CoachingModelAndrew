@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrew Tadros | Executive Coach Egypt</title>
+<style>
+/* ===== RESET & BASE ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',Arial,sans-serif;background:#08111f;color:#edf2ff;line-height:1.7;font-size:16px;}
+a{color:#c9a84c;text-decoration:none;}
+img{max-width:100%;}
+
+/* ===== TYPOGRAPHY ===== */
+h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;line-height:1.15;}
+h2{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:700;line-height:1.2;}
+h3{font-size:clamp(1.1rem,3vw,1.4rem);font-weight:600;}
+p{font-size:clamp(0.95rem,2.5vw,1.05rem);color:#c8d4ee;}
+
+/* ===== LAYOUT ===== */
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
+.section{padding:80px 0;}
+@media(max-width:768px){.section{padding:56px 0;}}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,17,31,0.95);backdrop-filter:blur(10px);border-bottom:1px solid #1e3260;padding:16px 20px;}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.nav-logo{font-size:17px;font-weight:700;color:#c9a84c;letter-spacing:0.5px;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{color:#b0bedd;font-size:14px;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover{color:#c9a84c;}
+.nav-cta{background:#c9a84c;color:#08111f !important;padding:8px 20px;border-radius:8px;font-weight:700 !important;}
+.nav-cta:hover{background:#e0bc5c !important;color:#08111f !important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:24px;height:2px;background:#edf2ff;border-radius:2px;transition:all 0.3s;}
+.mobile-menu{display:none;position:fixed;top:57px;left:0;right:0;background:#0d1730;border-bottom:1px solid #1e3260;padding:20px;z-index:99;}
+.mobile-menu a{display:block;color:#edf2ff;padding:14px 0;font-size:16px;border-bottom:1px solid #1e3260;}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu .mob-cta{color:#c9a84c !important;font-weight:700;}
+@media(max-width:768px){.nav-links{display:none;}.hamburger{display:flex;}.mobile-menu.open{display:block;}}
+
+/* ===== HERO ===== */
+.hero{padding:140px 0 90px;background:linear-gradient(160deg,#08111f 0%,#0d1a33 50%,#08111f 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+.hero-badge{display:inline-block;background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:#c9a84c;padding:6px 16px;border-radius:30px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:24px;}
+.hero h1{color:#edf2ff;margin-bottom:20px;}
+.hero h1 span{color:#c9a84c;}
+.hero-sub{font-size:1.1rem;color:#9eb4ea;margin-bottom:36px;max-width:480px;line-height:1.8;}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;}
+.btn-primary{background:#c9a84c;color:#08111f;padding:16px 32px;border-radius:10px;font-weight:700;font-size:16px;transition:all 0.2s;display:inline-block;border:none;cursor:pointer;}
+.btn-primary:hover{background:#e0bc5c;transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,0.3);}
+.btn-secondary{background:transparent;color:#edf2ff;padding:15px 32px;border-radius:10px;font-weight:600;font-size:16px;border:1px solid #2f4270;transition:all 0.2s;display:inline-block;cursor:pointer;}
+.btn-secondary:hover{border-color:#c9a84c;color:#c9a84c;}
+.hero-card{background:rgba(13,23,48,0.8);border:1px solid #1e3260;border-radius:20px;padding:36px;backdrop-filter:blur(10px);}
+.hero-card h3{color:#c9a84c;margin-bottom:20px;font-size:15px;text-transform:uppercase;letter-spacing:1.5px;}
+.stat-row{display:flex;flex-direction:column;gap:16px;}
+.stat{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #1e3260;}
+.stat:last-child{border-bottom:none;}
+.stat-icon{font-size:22px;width:44px;text-align:center;}
+.stat-text strong{display:block;color:#edf2ff;font-size:15px;}
+.stat-text span{color:#9eb4ea;font-size:13px;}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;}.hero-card{margin-top:20px;}}
+@media(max-width:480px){.hero{padding:110px 0 70px;}.btn-primary,.btn-secondary{width:100%;text-align:center;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="nav-inner">
+<div class="nav-logo">Andrew Tadros Coaching</div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#adhd">ADHD Coaching</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#book" class="nav-cta">Book Free Session</a></li>
+</ul>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</div>
+</div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+<a href="#about" onclick="toggleMenu()">About</a>
+<a href="#programs" onclick="toggleMenu()">Programs</a>
+<a href="#adhd" onclick="toggleMenu()">ADHD Coaching</a>
+<a href="#faq" onclick="toggleMenu()">FAQ</a>
+<a href="#book" onclick="toggleMenu()" class="mob-cta">→ Book Free Discovery Session</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="hero-inner">
+<div>
+<div class="hero-badge">🇪🇬 Executive Coach &bull; Cairo &bull; El Gouna</div>
+<h1>Lead with <span>Clarity.</span><br>Build with <span>Purpose.</span></h1>
+<p class="hero-sub">Executive coaching for founders, managers, and leaders across Egypt and the MENA region. Real systems. No fluff. Sustainable results.</p>
+<div class="hero-buttons">
+<a href="#book" class="btn-primary">💬 Book Free Discovery Session</a>
+<a href="#programs" class="btn-secondary">See Programs →</a>
+</div>
+</div>
+<div class="hero-card">
+<h3>What You Get</h3>
+<div class="stat-row">
+<div class="stat"><div class="stat-icon">🧠</div><div class="stat-text"><strong>Systems-first coaching</strong><span>Not motivation — real frameworks that stick</span></div></div>
+<div class="stat"><div class="stat-icon">🎯</div><div class="stat-text"><strong>ADHD-aware methods</strong><span>Built for how your brain actually works</span></div></div>
+<div class="stat"><div class="stat-icon">📈</div><div class="stat-text"><strong>Measurable progress</strong><span>Weekly wins tracked, reviewed, built upon</span></div></div>
+<div class="stat"><div class="stat-icon">🇪🇬</div><div class="stat-text"><strong>Egypt &amp; MENA context</strong><span>Coaching built for your actual reality</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+/* ===== ABOUT ===== */
+.about{background:#0a1525;}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.section-label{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;}
+.about h2{color:#edf2ff;margin-bottom:20px;}
+.about p{margin-bottom:16px;}
+.about-highlights{display:flex;flex-direction:column;gap:16px;margin-top:32px;}
+.highlight-item{display:flex;gap:16px;align-items:flex-start;background:#0f1e3a;border:1px solid #1e3260;border-radius:12px;padding:18px;}
+.highlight-icon{font-size:24px;flex-shrink:0;}
+.highlight-item strong{display:block;color:#edf2ff;margin-bottom:4px;}
+.highlight-item span{font-size:14px;color:#9eb4ea;}
+@media(max-width:768px){.about-inner{grid-template-columns:1fr;}}
+
+/* ===== PROGRAMS ===== */
+.programs{background:#08111f;}
+.programs h2{text-align:center;color:#edf2ff;margin-bottom:12px;}
+.programs .section-label{text-align:center;}
+.section-sub{text-align:center;color:#9eb4ea;max-width:560px;margin:0 auto 50px;}
+.programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.prog-card{background:#0f1e3a;border:1px solid #1e3260;border-radius:20px;padding:32px;position:relative;transition:transform 0.2s,box-shadow 0.2s;}
+.prog-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.4);}
+.prog-card.featured{border-color:#c9a84c;background:linear-gradient(160deg,#101e38,#0d1a33);}
+.prog-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c9a84c;color:#08111f;padding:4px 18px;border-radius:20px;font-size:12px;font-weight:700;white-space:nowrap;}
+.prog-tier{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9a84c;margin-bottom:10px;}
+.prog-name{font-size:22px;font-weight:700;color:#edf2ff;margin-bottom:6px;}
+.prog-price{font-size:28px;font-weight:800;color:#c9a84c;margin:16px 0 4px;}
+.prog-price span{font-size:14px;font-weight:400;color:#9eb4ea;}
+.prog-desc{font-size:14px;color:#9eb4ea;margin-bottom:20px;line-height:1.6;}
+.prog-features{list-style:none;margin-bottom:28px;}
+.prog-features li{font-size:14px;color:#c8d4ee;padding:8px 0;border-bottom:1px solid #1e3260;display:flex;gap:10px;align-items:flex-start;}
+.prog-features li::before{content:'✓';color:#c9a84c;font-weight:700;flex-shrink:0;}
+.prog-features li:last-child{border-bottom:none;}
+.prog-btn{display:block;text-align:center;background:#c9a84c;color:#08111f;padding:14px;border-radius:10px;font-weight:700;font-size:15px;transition:all 0.2s;}
+.prog-btn:hover{background:#e0bc5c;}
+.prog-btn.outline{background:transparent;color:#c9a84c;border:1px solid #c9a84c;}
+.prog-btn.outline:hover{background:#c9a84c;color:#08111f;}
+@media(max-width:900px){.programs-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:580px){.programs-grid{grid-template-columns:1fr;}}
+
+/* ===== ADHD ===== */
+.adhd{background:#0a1525;}
+.adhd-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.adhd h2{color:#edf2ff;margin-bottom:16px;}
+.adhd-pills{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0;}
+.pill{background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);color:#c9a84c;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;}
+.adhd-tools{display:flex;flex-direction:column;gap:14px;}
+.adhd-tool{background:#0f1e3a;border:1px solid #1e3260;border-radius:12px;padding:18px 20px;}
+.adhd-tool h4{color:#edf2ff;font-size:15px;margin-bottom:6px;}
+.adhd-tool p{font-size:13px;color:#9eb4ea;line-height:1.6;}
+@media(max-width:768px){.adhd-inner{grid-template-columns:1fr;}}
+
+/* ===== BOOK ===== */
+.book{background:#08111f;}
+.book h2{text-align:center;color:#edf2ff;margin-bottom:12px;}
+.book .section-label{text-align:center;}
+.book .section-sub{margin-bottom:40px;}
+.book-inner{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+.calendly-box{background:#0f1e3a;border:1px solid #1e3260;border-radius:20px;padding:36px;text-align:center;}
+.calendly-box h3{color:#edf2ff;margin-bottom:10px;}
+.calendly-box p{color:#9eb4ea;font-size:14px;margin-bottom:28px;}
+.calendly-embed{background:#101e38;border-radius:12px;padding:20px;margin-bottom:20px;min-height:60px;display:flex;align-items:center;justify-content:center;}
+.cal-placeholder{text-align:center;}
+.cal-placeholder p{font-size:13px;color:#7a9fd4;margin-top:8px;}
+.whatsapp-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#25d366;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;transition:all 0.2s;margin-top:14px;}
+.whatsapp-btn:hover{background:#1fb855;color:#fff;transform:translateY(-2px);}
+@media(max-width:768px){.book-inner{grid-template-columns:1fr;}}
+
+/* ===== ENQUIRY FORM ===== */
+.form-box{background:#0f1e3a;border:1px solid #1e3260;border-radius:20px;padding:36px;}
+.form-box h3{color:#edf2ff;margin-bottom:8px;}
+.form-box .form-sub{color:#9eb4ea;font-size:14px;margin-bottom:28px;}
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:13px;font-weight:600;color:#9eb4ea;margin-bottom:8px;letter-spacing:0.5px;}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:#08111f;border:1px solid #2a3f6a;border-radius:8px;padding:13px 16px;color:#edf2ff;font-size:14px;font-family:inherit;transition:border 0.2s;outline:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#c9a84c;}
+.form-group select option{background:#08111f;}
+.form-group textarea{resize:vertical;min-height:100px;}
+.form-submit{width:100%;background:#c9a84c;color:#08111f;padding:15px;border-radius:10px;font-weight:700;font-size:16px;border:none;cursor:pointer;transition:all 0.2s;font-family:inherit;}
+.form-submit:hover{background:#e0bc5c;transform:translateY(-2px);}
+.form-note{font-size:12px;color:#5a7ab0;text-align:center;margin-top:12px;}
+
+/* ===== FAQ ===== */
+.faq{background:#0a1525;}
+.faq h2{text-align:center;color:#edf2ff;margin-bottom:12px;}
+.faq .section-label{text-align:center;}
+.faq .section-sub{margin-bottom:40px;}
+.faq-list{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+.faq-item{background:#0f1e3a;border:1px solid #1e3260;border-radius:12px;overflow:hidden;}
+.faq-q{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:#edf2ff;font-weight:600;font-size:15px;}
+.faq-q:hover{color:#c9a84c;}
+.faq-arrow{color:#c9a84c;font-size:18px;transition:transform 0.3s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{display:none;padding:0 24px 20px;color:#9eb4ea;font-size:14px;line-height:1.8;border-top:1px solid #1e3260;padding-top:16px;}
+.faq-item.open .faq-a{display:block;}
+
+/* ===== FOOTER ===== */
+footer{background:#0a1525;border-top:1px solid #1e3260;padding:48px 20px;text-align:center;}
+.footer-logo{font-size:20px;font-weight:700;color:#c9a84c;margin-bottom:16px;}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:24px;}
+.footer-links a{color:#9eb4ea;font-size:14px;}
+.footer-links a:hover{color:#c9a84c;}
+.footer-note{color:#5a7ab0;font-size:13px;}
+.footer-social{display:flex;justify-content:center;gap:20px;margin:20px 0;}
+.social-btn{background:#18264a;border:1px solid #2f4270;color:#9eb4ea;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:600;transition:all 0.2s;}
+.social-btn:hover{border-color:#c9a84c;color:#c9a84c;}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav id="navbar">
+<div class="nav-inner">
+<div class="nav-logo">Andrew Tadros</div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#adhd">ADHD Coaching</a></li>
+<li><a href="#book">Book</a></li>
+<li><a href="#faq" onclick="toggleMenu()">FAQ</a></li>
+<li><a href="#book" class="nav-cta">&#128197; Book Free Discovery Session</a></li>
+</ul>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</div>
+</div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+<a href="#about" onclick="toggleMenu()">About</a>
+<a href="#programs" onclick="toggleMenu()">Programs</a>
+<a href="#adhd" onclick="toggleMenu()">ADHD Coaching</a>
+<a href="#book" onclick="toggleMenu()">Book</a>
+<a href="#faq" onclick="toggleMenu()">FAQ</a>
+<a href="#book" onclick="toggleMenu()" class="mob-cta">&#8594; Book Free Discovery Session</a>
+</div>
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="hero-inner">
+<div>
+<div class="hero-badge">&#127466;&#127468; Executive Coach &bull; Cairo &bull; El Gouna</div>
+<h1>Lead with <span>Clarity.</span><br>Build with <span>Purpose.</span></h1>
+<p class="hero-sub">Executive coaching for founders, managers, and leaders across Egypt and the MENA region. Real systems. No fluff.</p>
+<div class="hero-buttons">
+<a href="#book" class="btn-primary">&#128197; Book Free Discovery Session</a>
+<a href="#programs" class="btn-secondary">See Programs &#8594;</a>
+</div>
+</div>
+<div class="hero-card">
+<h3>What You Get</h3>
+<div class="stat-row">
+<div class="stat"><div class="stat-icon">&#129504;</div><div class="stat-text"><strong>Systems-first coaching</strong><span>Not motivation. Real frameworks.</span></div></div>
+<div class="stat"><div class="stat-icon">&#129504;</div><div class="stat-text"><strong>ADHD-aware methods</strong><span>Built for how your brain works.</span></div></div>
+<div class="stat"><div class="stat-icon">&#128200;</div><div class="stat-text"><strong>Measurable progress</strong><span>Weekly wins tracked.</span></div></div>
+<div class="stat"><div class="stat-icon">&#127466;&#127468;</div><div class="stat-text"><strong>Egypt &amp; MENA context</strong><span>Coaching that fits your world.</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+<section class="about" id="about">
+<div class="container">
+<div class="section-label">About</div>
+<h2>Andrew Tadros</h2>
+<div class="section-sub">Executive Coach | Cairo & El Gouna, Egypt</div>
+<div class="about-grid">
+<div class="about-text">
+<p>I work with founders, senior managers, and team leaders who are ready to move from reactive to intentional. My coaching combines leadership strategy, systems thinking, and an ADHD-aware lens developed across 15+ years in media, product, and organisational leadership across Egypt and the MENA region.</p>
+<p>Based between Cairo and El Gouna, I coach both in-person and remotely. My approach is direct, practical, and grounded in real business context. I don't deal in generic advice — every engagement is built around your specific situation, culture, and goals.</p>
+<div class="about-facts">
+<div class="fact"><strong>15+</strong><span>Years Leadership</span></div>
+<div class="fact"><strong>3</strong><span>Countries</span></div>
+<div class="fact"><strong>ADHD</strong><span>Specialist Focus</span></div>
+<div class="fact"><strong>EGY + MENA</strong><span>Context Expert</span></div>
+</div>
+</div>
+<div class="about-credentials">
+<h3>Background</h3>
+<ul class="cred-list">
+<li>&#9989; Executive leadership in media &amp; broadcasting</li>
+<li>&#9989; Product management &amp; digital transformation</li>
+<li>&#9989; Team building at scale across Egypt &amp; MENA</li>
+<li>&#9989; Strategic planning &amp; organisational design</li>
+<li>&#9989; Certified ADHD-aware leadership coach</li>
+<li>&#9989; Founder and senior management advisor</li>
+</ul>
+<a href="#book" class="btn-primary" style="margin-top:24px;display:inline-block;">Work With Me</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PROGRAMS -->
+<section class="programs" id="programs">
+<div class="container">
+<div class="section-label">Programs</div>
+<h2>Coaching Programs</h2>
+<div class="section-sub">Three tiers designed for different stages of leadership development</div>
+<div class="programs-grid">
+<div class="program-card">
+<div class="program-tier">Tier 1</div>
+<div class="program-name">Clarity Sprint</div>
+<div class="program-duration">4 Weeks &bull; Intensive</div>
+<div class="program-price">From <strong>EGP 8,000</strong></div>
+<p class="program-desc">A focused 4-week engagement for leaders who need rapid clarity on a specific challenge. Decision-making, team dynamics, or personal leadership reset.</p>
+<ul class="program-features">
+<li>4 x 60-min sessions</li>
+<li>Weekly action plan</li>
+<li>Email support between sessions</li>
+<li>Leadership assessment</li>
+<li>Session notes & resources</li>
+</ul>
+<a href="#book" class="btn-secondary">Enquire Now</a>
+</div>
+<div class="program-card featured">
+<div class="program-badge">Most Popular</div>
+<div class="program-tier">Tier 2</div>
+<div class="program-name">Leadership Engine</div>
+<div class="program-duration">12 Weeks &bull; Full Programme</div>
+<div class="program-price">From <strong>EGP 24,000</strong></div>
+<p class="program-desc">A comprehensive 3-month coaching programme covering leadership identity, team strategy, communication systems, and personal productivity.</p>
+<ul class="program-features">
+<li>12 x 60-min sessions</li>
+<li>Between-session check-ins</li>
+<li>Leadership toolkit & templates</li>
+<li>360 feedback process</li>
+<li>App-supported session tracking</li>
+<li>Monthly progress reports</li>
+</ul>
+<a href="#book" class="btn-primary">Enquire Now</a>
+</div>
+<div class="program-card">
+<div class="program-tier">Tier 3</div>
+<div class="program-name">Executive Partner</div>
+<div class="program-duration">6 Months &bull; Retainer</div>
+<div class="program-price">From <strong>EGP 60,000</strong></div>
+<p class="program-desc">A long-term advisory and coaching relationship for senior leaders and founders. Deep strategy work, team coaching, and ongoing executive support.</p>
+<ul class="program-features">
+<li>Bi-weekly 90-min sessions</li>
+<li>Unlimited async support</li>
+<li>Team workshops (x2)</li>
+<li>Custom leadership playbook</li>
+<li>Full app integration & dashboard</li>
+<li>Quarterly business reviews</li>
+</ul>
+<a href="#book" class="btn-secondary">Enquire Now</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ADHD COACHING -->
+<section class="adhd" id="adhd">
+<div class="container">
+<div class="section-label">Specialist Focus</div>
+<h2>ADHD-Aware Leadership Coaching</h2>
+<div class="section-sub">For leaders whose brains work differently — and who are done pretending otherwise</div>
+<div class="adhd-grid">
+<div class="adhd-text">
+<p>Many of the most visionary founders, creative directors, and senior leaders I've worked with have ADHD — diagnosed or suspected. The challenge isn't capability. It's that most leadership systems were designed for neurotypical brains.</p>
+<p>My ADHD-aware coaching adapts frameworks to match how you actually think: in bursts, visually, non-linearly. We work with your energy cycles, not against them. We build systems that hold up even on your worst days.</p>
+<div class="adhd-pillars">
+<div class="pillar"><strong>&#128994; Energy Mapping</strong><p>Work with your natural rhythms instead of fighting them daily.</p></div>
+<div class="pillar"><strong>&#128994; Systems That Stick</strong><p>Structures built for high-variance energy and attention patterns.</p></div>
+<div class="pillar"><strong>&#128994; Decision Clarity</strong><p>Tools to cut through overwhelm and make faster, cleaner calls.</p></div>
+<div class="pillar"><strong>&#128994; Team Communication</strong><p>How to lead effectively when your style differs from the norm.</p></div>
+</div>
+</div>
+<div class="adhd-quote">
+<blockquote>"ADHD isn't a deficit in attention. It's a difference in how attention is regulated. The right systems make all the difference."</blockquote>
+<div class="quote-attr">— Andrew Tadros</div>
+<a href="#book" class="btn-primary" style="margin-top:32px;display:inline-block;">Book an ADHD-Focused Session</a>
+</div>
+</div>
+</div>
+</section>
+<!-- BOOKING -->
+<section class="booking" id="book">
+<div class="container">
+<div class="section-label">Book</div>
+<h2>Start Your Coaching Journey</h2>
+<div class="section-sub">Book a free 30-minute discovery session. No obligation. Just clarity.</div>
+<div class="booking-grid">
+<div class="booking-info">
+<h3>Discovery Session</h3>
+<p>The first step is a free 30-minute conversation. We explore your situation, your goals, and whether we're the right fit. There's no hard sell — just an honest discussion.</p>
+<ul class="booking-list">
+<li>&#128197; 30 minutes via Zoom or in-person (Cairo / El Gouna)</li>
+<li>&#128203; No preparation required</li>
+<li>&#9989; Completely free of charge</li>
+<li>&#128172; Response within 24 hours</li>
+</ul>
+<div class="booking-cta">
+<a href="https://calendly.com" target="_blank" class="btn-primary">&#128197; Book via Calendly</a>
+<p class="form-note">Prefer to send a message? Use the form &#8594;</p>
+</div>
+</div>
+<div class="booking-form">
+<h3>Send an Enquiry</h3>
+<form class="enquiry-form" onsubmit="handleSubmit(event)">
+<div class="form-group">
+<label>Your Name</label>
+<input type="text" placeholder="e.g. Sara Khalil" required>
+</div>
+<div class="form-group">
+<label>Email Address</label>
+<input type="email" placeholder="sara@company.com" required>
+</div>
+<div class="form-group">
+<label>Phone / WhatsApp</label>
+<input type="tel" placeholder="+20 10 xxxx xxxx">
+</div>
+<div class="form-group">
+<label>What brings you here?</label>
+<select>
+<option value="">Select a topic...</option>
+<option>Leadership development</option>
+<option>Team management challenges</option>
+<option>ADHD-aware coaching</option>
+<option>Strategic clarity</option>
+<option>Founder / executive coaching</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group">
+<label>Tell me a bit more</label>
+<textarea rows="4" placeholder="What's the main challenge you're facing right now?"></textarea>
+</div>
+<button type="submit" class="form-submit">Send Enquiry &#8594;</button>
+<p class="form-note">I'll respond within 24 hours.</p>
+</form>
+<div id="formSuccess" style="display:none;text-align:center;padding:40px;"><h3 style="color:#c9a84c;">&#10003; Message Sent!</h3><p>Thanks for reaching out. I'll be in touch within 24 hours.</p></div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="faq" id="faq">
+<div class="container">
+<div class="section-label">FAQ</div>
+<h2>Common Questions</h2>
+<div class="section-sub">Everything you need to know before getting started</div>
+<div class="faq-list">
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>How is this different from other executive coaching?</span><span class="faq-arrow">&#9660;</span></div>
+<div class="faq-a">Most coaching is generic. My work is rooted in the Egypt and MENA business context, built around your actual situation, and adapted for leaders who may think or work differently. I bring 15+ years of real leadership experience — not just theory.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Do I need to be diagnosed with ADHD to work with you?</span><span class="faq-arrow">&#9660;</span></div>
+<div class="faq-a">No. Many of my clients suspect they may have ADHD but have never been formally diagnosed. Others are simply high-performers who feel their current systems aren't built for how they think. ADHD-aware coaching benefits anyone who works in bursts, struggles with traditional productivity systems, or needs a different approach.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Where do sessions take place?</span><span class="faq-arrow">&#9660;</span></div>
+<div class="faq-a">Sessions are available in-person in Cairo or El Gouna, or via Zoom for remote clients across Egypt and the wider MENA region. All formats are equally effective.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>How quickly can I get started?</span><span class="faq-arrow">&#9660;</span></div>
+<div class="faq-a">Book a free discovery session and we can typically start within 1-2 weeks. Discovery sessions are available most weekdays and can be scheduled via Calendly.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>What is the pricing structure?</span><span class="faq-arrow">&#9660;</span></div>
+<div class="faq-a">Programs start from EGP 8,000 for the 4-week Clarity Sprint up to EGP 60,000+ for the 6-month Executive Partner retainer. Payment plans are available. The discovery session is always free.</div>
+</div>
+<div class="faq-item">
+<div class="faq-q" onclick="toggleFaq(this)"><span>Is coaching confidential?</span><span class="faq-arrow">&#9660;</span></div>
+<div class="faq-a">Completely. Everything discussed in coaching sessions is 100% confidential. I work under a strict professional coaching ethics code.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="footer-logo">Andrew Tadros</div>
+<div class="footer-links">
+<a href="#about">About</a>
+<a href="#programs">Programs</a>
+<a href="#adhd">ADHD Coaching</a>
+<a href="#book">Book</a>
+<a href="#faq">FAQ</a>
+</div>
+<div class="footer-social">
+<a href="https://instagram.com" target="_blank" class="social-btn">Instagram</a>
+<a href="https://linkedin.com" target="_blank" class="social-btn">LinkedIn</a>
+<a href="https://wa.me/20" target="_blank" class="social-btn">WhatsApp</a>
+</div>
+<p class="footer-note">Executive Coaching &bull; Cairo &amp; El Gouna, Egypt &bull; Serving Egypt &amp; MENA</p>
+<p class="footer-note" style="margin-top:8px;">&copy; 2025 Andrew Tadros. All rights reserved.</p>
+</footer>
+<script>
+function toggleMenu(){
+var m=document.getElementById('mobileMenu');
+m.classList.toggle('open');
+}
+function toggleFaq(el){
+var item=el.parentElement;
+item.classList.toggle('open');
+}
+function handleSubmit(e){
+e.preventDefault();
+document.querySelector('.enquiry-form').style.display='none';
+document.getElementById('formSuccess').style.display='block';
+}
+window.addEventListener('scroll',function(){
+var nav=document.getElementById('navbar');
+if(window.scrollY>50){nav.style.background='rgba(8,17,31,0.98)';}else{nav.style.background='rgba(8,17,31,0.95)';}
+});
+</script>
+</body>
+</html>
